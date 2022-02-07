@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCalculator, faBell } from '@fortawesome/free-solid-svg-icons';
+
 function AppNav() {
 	return (
 		<nav>
@@ -11,7 +14,18 @@ function AppNav() {
 						<h3 className="user-role">Admin</h3>
 					</div>
 				</div>
+
+				<div className="other-btns">
+					<button>
+						<FontAwesomeIcon icon={faCalculator} />
+					</button>
+					<button>
+						<FontAwesomeIcon icon={faBell} />
+					</button>
+				</div>
 			</div>
 		</nav>
 	);
 }
+
+export default AppNav;
