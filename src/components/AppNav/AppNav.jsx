@@ -21,7 +21,7 @@ function AppNav() {
 					</div>
 				</div>
 
-				<div className="nav-btns space-x-5">
+				<div className="nav-btns space-x-6 flex">
 					<button className="btn">
 						<FontAwesomeIcon icon={faCalculator} className="btn-icon" />
 					</button>
