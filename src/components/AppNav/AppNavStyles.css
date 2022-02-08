@@ -1,3 +1,7 @@
 .btn {
-	@apply w-9 h-9 rounded-full shadow;
+	@apply w-9 h-9 rounded-full shadow relative;
+}
+
+.btn-icon {
+	@apply absolute top-1/2 left-1/2 transform scale-75 -translate-x-1/2 -translate-y-1/2;
 }

@@ -23,13 +23,13 @@ function AppNav() {
 
 				<div className="nav-btns space-x-5">
 					<button className="btn">
-						<FontAwesomeIcon icon={faCalculator} />
+						<FontAwesomeIcon icon={faCalculator} className="btn-icon" />
 					</button>
 					<button
 						className="btn text-white bg-gray-700 relative"
 						onClick={() => setNotificationExists(false)}
 					>
-						<FontAwesomeIcon icon={faBell} />
+						<FontAwesomeIcon icon={faBell} className="btn-icon" />
 						{notificationExists && (
 							<div className="active h-2 w-2 rounded-full bg-red-400 absolute top-1 right-0"></div>
 						)}
