@@ -23,5 +23,5 @@ code {
 }
 
 .container {
-	@apply px-7;
+	@apply px-10;
 }

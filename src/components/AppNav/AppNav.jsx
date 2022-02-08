@@ -17,11 +17,11 @@ function AppNav() {
 						<span className="user-name">Classic IT</span>
 						<br />
 
-						<span className="user-role text-red-600 text-sm">Admin</span>
+						<span className="user-role text-red-600 text-xs">Admin</span>
 					</div>
 				</div>
 
-				<div className="other-btns space-x-5">
+				<div className="nav-btns space-x-5">
 					<button className="btn">
 						<FontAwesomeIcon icon={faCalculator} />
 					</button>
