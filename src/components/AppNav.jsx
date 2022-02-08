@@ -6,7 +6,7 @@ function AppNav() {
 		<nav>
 			<div className="container">
 				<div className="user-profile">
-					<img src="" alt="" />
+					<img src="logos_temp/Logo.png" alt="User logo" />
 
 					<div className="user-data">
 						<h2 className="user-name">Classic IT</h2>

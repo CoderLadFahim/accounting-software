@@ -3,7 +3,7 @@ import AppNav from './components/AppNav';
 
 function App() {
 	return (
-		<div className="App">
+		<div className="App bg-gray-50">
 			<header className="App-header">
 				<AppNav />
 			</header>
