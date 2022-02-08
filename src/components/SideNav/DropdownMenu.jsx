@@ -20,14 +20,14 @@ function DropdownMenu() {
 	return (
 		<ul className="nav-links">
 			<li className="nav-link active">
-				<FontAwesomeIcon icon={faHome} />
+				<FontAwesomeIcon icon={faHome} className="nav-icon" />
 				Home
 			</li>
 
 			<li className="nav-link">
-				<FontAwesomeIcon icon={faAddressBook} />
+				<FontAwesomeIcon icon={faAddressBook} className="nav-icon" />
 				Contact
-				<FontAwesomeIcon icon={faCaretDown} />
+				<FontAwesomeIcon icon={faCaretDown} className="caret-down" />
 				<ul className="hidden">
 					<li>Customers</li>
 					<li>Suppliers</li>
@@ -35,7 +35,7 @@ function DropdownMenu() {
 			</li>
 
 			<li className="nav-link">
-				<FontAwesomeIcon icon={faBoxes} />
+				<FontAwesomeIcon icon={faBoxes} className="nav-icon" />
 				Products
 				<ul className="hidden">
 					<li>Product List</li>
@@ -45,54 +45,54 @@ function DropdownMenu() {
 					<li>Brands</li>
 					<li>Warranties</li>
 				</ul>
-				<FontAwesomeIcon icon={faCaretDown} />
+				<FontAwesomeIcon icon={faCaretDown} className="caret-down" />
 			</li>
 
 			<li className="nav-link">
-				<FontAwesomeIcon icon={faShoppingCart} />
+				<FontAwesomeIcon icon={faShoppingCart} className="nav-icon" />
 				Sales
-				<FontAwesomeIcon icon={faCaretDown} />
+				<FontAwesomeIcon icon={faCaretDown} className="caret-down" />
 			</li>
 
 			<li className="nav-link">
-				<FontAwesomeIcon icon={faMoneyCheck} />
+				<FontAwesomeIcon icon={faMoneyCheck} className="nav-icon" />
 				Purchases
-				<FontAwesomeIcon icon={faCaretDown} />
+				<FontAwesomeIcon icon={faCaretDown} className="caret-down" />
 			</li>
 
 			<li className="nav-link">
-				<FontAwesomeIcon icon={faMoneyBillWave} />
+				<FontAwesomeIcon icon={faMoneyBillWave} className="nav-icon" />
 				Payment
-				<FontAwesomeIcon icon={faCaretDown} />
+				<FontAwesomeIcon icon={faCaretDown} className="caret-down" />
 			</li>
 
 			<li className="nav-link">
-				<FontAwesomeIcon icon={faWallet} />
+				<FontAwesomeIcon icon={faWallet} className="nav-icon" />
 				Expense
-				<FontAwesomeIcon icon={faCaretDown} />
+				<FontAwesomeIcon icon={faCaretDown} className="caret-down" />
 			</li>
 
 			<li className="nav-link">
-				<FontAwesomeIcon icon={faPiggyBank} />
+				<FontAwesomeIcon icon={faPiggyBank} className="nav-icon" />
 				Banks
-				<FontAwesomeIcon icon={faCaretDown} />
+				<FontAwesomeIcon icon={faCaretDown} className="caret-down" />
 			</li>
 
 			<li className="nav-link">
 				Language
-				<FontAwesomeIcon icon={faLanguage} />
+				<FontAwesomeIcon icon={faLanguage} className="nav-icon" />
 			</li>
 
 			<li className="nav-link">
-				<FontAwesomeIcon icon={faUser} />
+				<FontAwesomeIcon icon={faUser} className="nav-icon" />
 				Users
-				<FontAwesomeIcon icon={faCaretDown} />
+				<FontAwesomeIcon icon={faCaretDown} className="caret-down" />
 			</li>
 
 			<li className="nav-link">
-				<FontAwesomeIcon icon={faFileAlt} />
+				<FontAwesomeIcon icon={faFileAlt} className="nav-icon" />
 				Reports
-				<FontAwesomeIcon icon={faCaretDown} />
+				<FontAwesomeIcon icon={faCaretDown} className="caret-down" />
 			</li>
 		</ul>
 	);

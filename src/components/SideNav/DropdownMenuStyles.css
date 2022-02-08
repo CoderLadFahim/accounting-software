@@ -3,7 +3,11 @@
 }
 
 .nav-link {
-	@apply bg-gray-800 py-2 text-left;
+	@apply bg-gray-800 py-2 pl-4 text-left text-base relative;
+}
+
+.nav-link .caret-down {
+	@apply absolute right-4;
 }
 
 .nav-link.active {
