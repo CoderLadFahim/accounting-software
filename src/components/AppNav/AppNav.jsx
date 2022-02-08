@@ -11,7 +11,11 @@ function AppNav() {
 		<nav className="fixed w-screen top-0 h-16 shadow bg-white text-gray-700 grid place-items-center">
 			<div className="container flex justify-between items-center">
 				<div className="user-profile flex items-center text-left space-x-3">
-					<img src="logos_temp/Logo.png" alt="User logo" />
+					<img
+						src="logos_temp/Logo.png"
+						alt="User logo"
+						className="w-8 h-8 rounded-full shadow"
+					/>
 
 					<div className="user-data flex flex-col items-start">
 						<span className="user-name sm:text-base">Classic IT</span>
