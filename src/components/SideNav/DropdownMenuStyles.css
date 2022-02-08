@@ -3,5 +3,9 @@
 }
 
 .nav-link {
-	@apply bg-gray-800 border-b py-3 text-left;
+	@apply bg-gray-800 py-2 text-left;
+}
+
+.nav-link.active {
+	@apply border-l-4 border-teal-300;
 }
