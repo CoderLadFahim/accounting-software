@@ -21,3 +21,7 @@ code {
 .font-roboto {
 	font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
+
+.container {
+	@apply px-7;
+}

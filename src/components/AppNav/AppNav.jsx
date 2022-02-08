@@ -6,7 +6,7 @@ import { faCalculator, faBell } from '@fortawesome/free-solid-svg-icons';
 function AppNav() {
 	return (
 		<nav class="fixed w-screen top-0 h-16 shadow bg-white text-gray-700 grid place-items-center">
-			<div className="container border flex justify-between items-center">
+			<div className="container flex justify-between items-center">
 				<div className="user-profile flex items-center text-left space-x-3">
 					<img src="logos_temp/Logo.png" alt="User logo" />
 
