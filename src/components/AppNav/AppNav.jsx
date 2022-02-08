@@ -14,7 +14,7 @@ function AppNav() {
 					<img src="logos_temp/Logo.png" alt="User logo" />
 
 					<div className="user-data flex flex-col items-start">
-						<span className="user-name">Classic IT</span>
+						<span className="user-name sm:text-base">Classic IT</span>
 						<br />
 
 						<span className="user-role text-red-600 text-xs">Admin</span>
