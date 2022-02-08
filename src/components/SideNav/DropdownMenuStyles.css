@@ -1,0 +1,7 @@
+.nav-links {
+	@apply border border-teal-500;
+}
+
+.nav-link {
+	@apply bg-gray-800 border-b py-3 text-left;
+}

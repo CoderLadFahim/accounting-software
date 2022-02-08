@@ -1,15 +1,14 @@
 import './SideNavStyles.css';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCalculator, faBell } from '@fortawesome/free-solid-svg-icons';
+import DropdownMenu from './DropdownMenu.jsx';
 
 function SideNav() {
 	return (
 		<div
 			id="side-nav"
-			className="border fixed w-9/12 h-screen left-0 bg-gray-700 text-gray-50 hidden"
+			className="fixed w-9/12 h-screen left-0 bg-gray-700 text-gray-50"
 		>
-			<div className="user-info flex flex-col items-center space-y-5 mt-10">
+			<div className="user-info flex flex-col items-center space-y-5 my-5">
 				<img
 					src="logos_temp/Logo.png"
 					alt="User logo"
@@ -23,21 +22,10 @@ function SideNav() {
 					<span className="user-role text-red-400 text-xs">Admin</span>
 				</div>
 
-				<div className="separator w-10/12 h-1 bg-gray-500 rounded-full mx-auto"></div>
+				<div className="separator w-9/12 h-1 bg-gray-500 rounded-full mx-auto shadow"></div>
 			</div>
 
-			<ul className="nav-links">
-				<li className="nav-link"></li>
-				<li className="nav-link"></li>
-				<li className="nav-link"></li>
-				<li className="nav-link"></li>
-				<li className="nav-link"></li>
-				<li className="nav-link"></li>
-				<li className="nav-link"></li>
-				<li className="nav-link"></li>
-				<li className="nav-link"></li>
-				<li className="nav-link"></li>
-			</ul>
+			<DropdownMenu />
 		</div>
 	);
 }
