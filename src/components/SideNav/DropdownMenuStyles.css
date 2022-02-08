@@ -3,7 +3,7 @@
 }
 
 .nav-link {
-	@apply bg-gray-800 py-2 pl-4 text-left text-base relative;
+	@apply bg-gray-800 py-2 pl-4 text-left text-base relative flex items-center;
 }
 
 .nav-link .caret-down {
