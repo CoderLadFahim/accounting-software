@@ -18,7 +18,7 @@ import {
 
 function DropdownMenu() {
 	return (
-		<ul className="nav-links border">
+		<ul className="nav-links">
 			<NavLink
 				icon={<FontAwesomeIcon icon={faHome} className="nav-icon" />}
 				spanText="Home"
