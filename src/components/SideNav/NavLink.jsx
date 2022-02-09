@@ -1,4 +1,6 @@
 import './NavLinkStyles.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
 function NavLink({ children, icon, spanText }) {
 	return (
@@ -9,6 +11,9 @@ function NavLink({ children, icon, spanText }) {
 			</div>
 
 			{children}
+			{children && (
+				<FontAwesomeIcon icon={faCaretDown} className="caret-down" />
+			)}
 		</li>
 	);
 }

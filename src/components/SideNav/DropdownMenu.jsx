@@ -22,18 +22,21 @@ function DropdownMenu() {
 		<ul className="nav-links">
 			<NavLink icon={<FontAwesomeIcon icon={faHome} className="nav-icon" />} spanText="Home"/>
 
-			<li className="nav-link">
-				<div className="nav-link-content space-x-3">
-					<FontAwesomeIcon icon={faAddressBook} className="nav-icon" />
-					<span>Contact</span>
-				</div>
-				<FontAwesomeIcon icon={faCaretDown} className="caret-down" />
-				
+			<NavLink icon={<FontAwesomeIcon icon={faAddressBook} className="nav-icon" />} spanText="Contact">
 				<ul>
 					<li>Customers</li>
 					<li>Suppliers</li>
 				</ul>
-			</li>
+			</NavLink>
+
+			{/* <li className="nav-link"> */}
+			{/* 	<div className="nav-link-content space-x-3"> */}
+			{/* 		<FontAwesomeIcon icon={faAddressBook} className="nav-icon" /> */}
+			{/* 		<span>Contact</span> */}
+			{/* 	</div> */}
+			{/* 	<FontAwesomeIcon icon={faCaretDown} className="caret-down" /> */}
+				
+			{/* </li> */}
 
 			<li className="nav-link">
 				<div className="nav-link-content space-x-3">
