@@ -1,21 +1,5 @@
-.nav-link {
-	@apply bg-gray-800 py-2 text-left text-base relative hover:bg-gray-700 cursor-pointer pl-4;
-}
-
-.nav-link:last-child {
-	@apply border-b border-teal-300;
-}
-
-.nav-link span, .nav-link li {
+.nav-link li {
 	@apply hover:text-teal-200;
-}
-
-.nav-link-content {
-	/* @apply absolute left-3; */
-}
-
-.nav-link .caret-down {
-	@apply absolute right-4 top-3;
 }
 
 .nav-link ul {
