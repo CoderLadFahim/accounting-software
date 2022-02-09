@@ -3,7 +3,7 @@
 }
 
 .nav-link ul {
-	@apply text-sm mt-2 hidden;
+	@apply text-sm mt-2;
 }
 
 .nav-link ul li {

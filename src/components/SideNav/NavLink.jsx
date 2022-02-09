@@ -1,16 +1,22 @@
+import { useState } from 'react';
 import './NavLinkStyles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
 function NavLink({ children, icon, spanText }) {
+	const [showDropDown, setShowDropDown] = useState(false);
+
 	return (
-		<li className="nav-link bg-gray-800 py-2 text-left text-base relative hover:bg-gray-700 cursor-pointer pl-4 last:border-b last:border-teal-300">
+		<li
+			className="nav-link bg-gray-800 py-2 text-left text-base relative hover:bg-gray-700 cursor-pointer pl-4 last:border-b last:border-slate-300"
+			onClick={() => setShowDropDown((prev) => !prev)}
+		>
 			<div className="nav-link-content space-x-3">
 				{icon}
 				<span className="hover:text-teal-200">{spanText}</span>
 			</div>
 
-			{children}
+			{showDropDown && children}
 			{children && (
 				<FontAwesomeIcon
 					icon={faCaretDown}
