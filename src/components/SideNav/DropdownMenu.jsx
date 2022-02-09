@@ -1,5 +1,6 @@
 import './DropdownMenuStyles.css';
 
+import NavLink from './NavLink.jsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
 	faCaretDown,
@@ -19,7 +20,7 @@ import {
 function DropdownMenu() {
 	return (
 		<ul className="nav-links">
-			<li className="nav-link active">
+			<li className="nav-link">
 				<div className="nav-link-content space-x-3">
 					<FontAwesomeIcon icon={faHome} className="nav-icon" />
 					<span>Home</span>
@@ -44,7 +45,7 @@ function DropdownMenu() {
 					<FontAwesomeIcon icon={faBoxes} className="nav-icon" />
 					<span>Products</span>
 				</div>
-				<ul className="hidden">
+				<ul>
 					<li>Product List</li>
 					<li>Categories</li>
 					<li>Variations</li>
