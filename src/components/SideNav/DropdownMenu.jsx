@@ -20,12 +20,7 @@ import {
 function DropdownMenu() {
 	return (
 		<ul className="nav-links">
-			<li className="nav-link">
-				<div className="nav-link-content space-x-3">
-					<FontAwesomeIcon icon={faHome} className="nav-icon" />
-					<span>Home</span>
-				</div>
-			</li>
+			<NavLink icon={<FontAwesomeIcon icon={faHome} className="nav-icon" />} spanText="Home"/>
 
 			<li className="nav-link">
 				<div className="nav-link-content space-x-3">
