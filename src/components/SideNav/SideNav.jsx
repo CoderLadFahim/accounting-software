@@ -6,7 +6,7 @@ function SideNav() {
 	return (
 		<div
 			id="side-nav"
-			className="fixed w-9/12 h-screen left-0 bg-gray-700 text-gray-50"
+			className="w-9/12 h-screen bg-gray-700 text-gray-50 z-10"
 		>
 			<div className="user-info flex flex-col items-center my-5 space-y-3">
 				<img

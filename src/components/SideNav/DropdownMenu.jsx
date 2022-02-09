@@ -18,7 +18,7 @@ import {
 
 function DropdownMenu() {
 	return (
-		<ul className="nav-links">
+		<ul className="nav-links border">
 			<NavLink
 				icon={<FontAwesomeIcon icon={faHome} className="nav-icon" />}
 				spanText="Home"
@@ -123,7 +123,7 @@ function DropdownMenu() {
 			>
 				<ul>
 					<li>English</li>
-					<li>Bangla</li>
+					<li>বাংলা</li>
 				</ul>
 			</NavLink>
 
