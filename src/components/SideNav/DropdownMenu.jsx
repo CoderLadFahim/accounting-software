@@ -107,34 +107,44 @@ function DropdownMenu() {
 				</ul>
 			</NavLink>
 
-			<NavLink icon={<FontAwesomeIcon icon={faPiggyBank} className="nav-icon" />} spanText="Banks">
+			<NavLink
+				icon={<FontAwesomeIcon icon={faPiggyBank} className="nav-icon" />}
+				spanText="Banks"
+			>
 				<ul>
 					<li>Manage Accounts</li>
 					<li>Add Accounts</li>
 				</ul>
 			</NavLink>
 
-			<NavLink icon={<FontAwesomeIcon icon={faLanguage} className="nav-icon" />} spanText="Language">
+			<NavLink
+				icon={<FontAwesomeIcon icon={faLanguage} className="nav-icon" />}
+				spanText="Language"
+			>
 				<ul>
 					<li>English</li>
 					<li>Bangla</li>
 				</ul>
 			</NavLink>
 
-
-			<NavLink icon={<FontAwesomeIcon icon={faUser} className="nav-icon" />} spanText="Users">
+			<NavLink
+				icon={<FontAwesomeIcon icon={faUser} className="nav-icon" />}
+				spanText="Users"
+			>
 				<ul>
 					<li>Users</li>
 					<li>Roles</li>
 				</ul>
 			</NavLink>
-			<NavLink icon={<FontAwesomeIcon icon={faFileAlt} className="nav-icon" />} spanText="Reports">
+			<NavLink
+				icon={<FontAwesomeIcon icon={faFileAlt} className="nav-icon" />}
+				spanText="Reports"
+			>
 				<ul>
 					<li>Sales Reports</li>
 					<li>Purchase Reports</li>
 				</ul>
 			</NavLink>
-
 		</ul>
 	);
 }
