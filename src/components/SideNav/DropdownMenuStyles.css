@@ -3,17 +3,21 @@
 }
 
 .nav-link {
-	@apply bg-gray-800 h-10 text-left text-base relative flex items-center hover:bg-gray-700 cursor-pointer;
+	@apply bg-gray-800 py-2 text-left text-base relative hover:bg-gray-700 cursor-pointer border border-emerald-400;
 }
 
 .nav-link-content {
-	@apply absolute left-3;
+	/* @apply absolute left-3; */
 }
 
 .nav-link .caret-down {
-	@apply absolute right-4;
+	@apply absolute right-4 top-3;
 }
 
 .nav-link.active {
 	@apply text-teal-300;
+}
+
+.nav-link ul {
+	@apply ml-12 text-sm space-y-2 mt-2 list-disc;
 }

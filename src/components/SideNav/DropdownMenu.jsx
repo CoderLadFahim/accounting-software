@@ -32,7 +32,8 @@ function DropdownMenu() {
 					<span>Contact</span>
 				</div>
 				<FontAwesomeIcon icon={faCaretDown} className="caret-down" />
-				<ul className="hidden">
+				
+				<ul>
 					<li>Customers</li>
 					<li>Suppliers</li>
 				</ul>
