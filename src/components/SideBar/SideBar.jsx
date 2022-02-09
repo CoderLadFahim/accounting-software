@@ -1,8 +1,8 @@
-import './SideNavStyles.css';
+import './SideBarStyles.css';
 
 import DropdownMenu from './DropdownMenu.jsx';
 
-function SideNav() {
+function SideBar() {
 	return (
 		<div
 			id="side-nav"
@@ -30,4 +30,4 @@ function SideNav() {
 	);
 }
 
-export default SideNav;
+export default SideBar;
