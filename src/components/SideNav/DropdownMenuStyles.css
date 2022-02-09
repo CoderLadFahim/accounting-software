@@ -3,7 +3,15 @@
 }
 
 .nav-link {
-	@apply bg-gray-800 py-2 text-left text-base relative hover:bg-gray-700 cursor-pointer border border-emerald-400;
+	@apply bg-gray-800 py-2 text-left text-base relative hover:bg-gray-700 cursor-pointer pl-4;
+}
+
+.nav-link:last-child {
+	@apply border-b border-teal-300;
+}
+
+.nav-link span, .nav-link li {
+	@apply hover:text-teal-200;
 }
 
 .nav-link-content {
@@ -15,9 +23,13 @@
 }
 
 .nav-link.active {
-	@apply text-teal-300;
+	@apply text-teal-300 bg-gray-900 font-bold;
 }
 
 .nav-link ul {
-	@apply ml-12 text-sm space-y-2 mt-2 list-disc;
+	@apply text-sm mt-2;
+}
+
+.nav-link ul li {
+	@apply py-2 px-10;
 }
