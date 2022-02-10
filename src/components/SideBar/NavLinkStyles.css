@@ -11,9 +11,10 @@
 }
 
 .nav-link.active {
-	@apply bg-slate-900;
+	@apply bg-gray-900;
 }
 
-.nav-link.active .nav-link-text {
-	@apply text-cyan-400;
+.nav-link.active .nav-link-text,
+.nav-link.active svg {
+	@apply text-cyan-300;
 }

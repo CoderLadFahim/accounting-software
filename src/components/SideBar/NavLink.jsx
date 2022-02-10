@@ -8,16 +8,18 @@ function NavLink({ children, icon, spanText }) {
 
 	return (
 		<li
-			className={`${
+			className={`nav-link bg-gray-800 py-2 text-left text-base relative hover:bg-gray-700 cursor-pointer pl-4 last:border-b last:border-slate-300 ${
 				showDropDown ? 'active' : ''
-			} nav-link bg-gray-800 py-2 text-left text-base relative hover:bg-gray-700 cursor-pointer pl-4 last:border-b last:border-slate-300`}
+			}`}
 		>
 			<div
 				className="nav-link-content space-x-3"
 				onClick={() => setShowDropDown((prev) => !prev)}
 			>
 				{icon}
-				<span className="hover:text-teal-200">{spanText}</span>
+				<span className="nav-link-text hover:text-cyan-200">
+					{spanText}
+				</span>
 			</div>
 
 			{showDropDown && children}
