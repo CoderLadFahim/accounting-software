@@ -7,7 +7,11 @@ function NavLink({ children, icon, spanText }) {
 	const [showDropDown, setShowDropDown] = useState(false);
 
 	return (
-		<li className="nav-link bg-gray-800 py-2 text-left text-base relative hover:bg-gray-700 cursor-pointer pl-4 last:border-b last:border-slate-300">
+		<li
+			className={`${
+				showDropDown ? 'active' : ''
+			} nav-link bg-gray-800 py-2 text-left text-base relative hover:bg-gray-700 cursor-pointer pl-4 last:border-b last:border-slate-300`}
+		>
 			<div
 				className="nav-link-content space-x-3"
 				onClick={() => setShowDropDown((prev) => !prev)}

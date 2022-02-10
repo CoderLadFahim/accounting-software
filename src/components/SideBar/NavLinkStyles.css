@@ -9,3 +9,11 @@
 .nav-link ul li {
 	@apply py-2 px-10;
 }
+
+.nav-link.active {
+	@apply bg-slate-900;
+}
+
+.nav-link.active .nav-link-text {
+	@apply text-cyan-400;
+}
