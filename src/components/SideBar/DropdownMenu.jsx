@@ -14,6 +14,7 @@ import {
 	faUser,
 	faLanguage,
 	faFileAlt,
+	faWrench,
 } from '@fortawesome/free-solid-svg-icons';
 
 function DropdownMenu() {
@@ -143,6 +144,15 @@ function DropdownMenu() {
 				<ul>
 					<li>Sales Reports</li>
 					<li>Purchase Reports</li>
+				</ul>
+			</NavLink>
+			<NavLink
+				icon={<FontAwesomeIcon icon={faWrench} className="nav-icon" />}
+				spanText="Settings"
+			>
+				<ul>
+					<li>ITEM1</li>
+					<li>ITEM2</li>
 				</ul>
 			</NavLink>
 		</ul>
