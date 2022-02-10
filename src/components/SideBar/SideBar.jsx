@@ -6,9 +6,10 @@ function SideBar() {
 	return (
 		<div
 			id="side-nav"
-			className="absolute left-0 w-9/12 h-screen bg-gray-700 text-gray-50 z-10"
+			className="absolute left-0 w-9/12 h-screen bg-gray-700 text-gray-50 z-10
+			sm:w-7/12"
 		>
-			<div className="user-info py-2 flex items-center pl-4 justify-center gap-3 bg-gray-900">
+			<div className="user-info py-2 flex items-center pl-4 gap-3 bg-gray-900">
 				<img
 					src="logos_temp/Logo.png"
 					alt="User logo"

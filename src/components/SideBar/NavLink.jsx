@@ -20,7 +20,9 @@ function NavLink({ children, icon, spanText }) {
 			{children && (
 				<FontAwesomeIcon
 					icon={faCaretDown}
-					className="caret-down absolute right-4 top-3"
+					className={`caret-down absolute right-4 top-3 transform ${
+						showDropDown ? 'rotate-180' : ''
+					}`}
 				/>
 			)}
 		</li>
