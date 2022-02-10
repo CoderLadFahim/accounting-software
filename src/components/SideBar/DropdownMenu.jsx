@@ -142,8 +142,24 @@ function DropdownMenu() {
 				spanText="Reports"
 			>
 				<ul>
-					<li>Sales Reports</li>
-					<li>Purchase Reports</li>
+					<li>Profit / Loss Report</li>
+					<li>Product Sell Report</li>
+					<li>Service Staff Report</li>
+					<li>Sales Representative Report</li>
+					<li>Register Report</li>
+					<li>Expense Report</li>
+					<li>Sell Payment Report</li>
+					<li>Purchase Payment Report</li>
+					<li>Product Purchase Report</li>
+					<li>Purchase &amp; Sale</li>
+					<li>Items Report</li>
+					<li>Trending Products</li>
+					<li>Stock Adjustment Report</li>
+					<li>Stock Report</li>
+					<li>Customer Groups Report</li>
+					<li>Supplier &amp; Customer Report</li>
+					<li>Tax Report</li>
+					<li>Activity Log</li>
 				</ul>
 			</NavLink>
 			<NavLink
@@ -151,8 +167,14 @@ function DropdownMenu() {
 				spanText="Settings"
 			>
 				<ul>
-					<li>ITEM1</li>
-					<li>ITEM2</li>
+					<li>Business Settings</li>
+					<li>Business Locations</li>
+					<li>Invoice Settings</li>
+					<li>Barcode Settings</li>
+					<li>Receipt Printers</li>
+					<li>Tax Rates</li>
+					<li>Modifiers</li>
+					<li>Types of service</li>
 				</ul>
 			</NavLink>
 		</ul>
