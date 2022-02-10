@@ -1,6 +1,7 @@
 import './App.css';
 import AppNav from './components/AppNav/AppNav.jsx';
 import SideBar from './components/SideBar/SideBar.jsx';
+import AppButton from './components/AppButton.jsx';
 
 function App() {
 	return (
@@ -8,6 +9,9 @@ function App() {
 			<header className="App-header">
 				<AppNav />
 				<SideBar />
+				<AppButton>
+					Beep
+				</AppButton>
 			</header>
 		</div>
 	);
