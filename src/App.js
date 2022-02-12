@@ -9,9 +9,7 @@ function App() {
 			<header className="App-header">
 				<AppNav />
 				<SideBar />
-				<AppButton>
-					Beep
-				</AppButton>
+				<AppButton>Click me</AppButton>
 			</header>
 		</div>
 	);
