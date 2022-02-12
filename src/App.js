@@ -9,7 +9,12 @@ function App() {
 			<header className="App-header">
 				<AppNav />
 				<SideBar />
-				<AppButton>Click me</AppButton>
+				<AppButton
+					className="bg-red-500"
+					onClick={() => console.log('Salaam')}
+				>
+					Click me
+				</AppButton>
 			</header>
 		</div>
 	);
