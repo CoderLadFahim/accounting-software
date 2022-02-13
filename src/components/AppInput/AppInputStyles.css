@@ -7,13 +7,13 @@ label {
 }
 
 label span {
-	@apply absolute bottom-0;
+	@apply absolute bottom-0 left-0;
 	transition: 300ms;
 }
 
 input {
 	color: #51c9bf;
-	@apply w-full h-full bg-transparent  pt-7 transition duration-75;
+	@apply w-full h-full bg-transparent  pt-5 transition duration-75;
 }
 
 label::after {
@@ -25,7 +25,7 @@ label::after {
 
 input:focus + label span,
 input:valid + label span {
-	@apply bottom-8 text-xs font-bold text-purple-400;
+	@apply bottom-9 text-xs font-bold text-purple-400;
 }
 
 input:focus + label::after,
