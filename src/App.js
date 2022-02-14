@@ -2,6 +2,7 @@ import './App.css';
 import AppNav from './components/AppNav/AppNav.jsx';
 import SideBar from './components/SideBar/SideBar.jsx';
 import AppInput from './components/AppInput/AppInput.jsx';
+import Table from './components/Table/Table.jsx';
 import AppButton from './components/AppButton.jsx';
 import HamburgerMenu from './components/HamburgerMenu.jsx';
 
@@ -10,17 +11,7 @@ function App() {
 		<div className="App bg-gray-50 font-roboto">
 			<header className="App-header">
 				<AppNav />
-				<SideBar />
-				<AppButton
-					className="bg-red-500 hidden"
-					onClick={() => console.log('Salaam')}
-				>
-					Click me
-				</AppButton>
-				<HamburgerMenu />
-				<div className="w-64">
-					<AppInput labelText="Name" />
-				</div>
+				<Table />
 			</header>
 		</div>
 	);
