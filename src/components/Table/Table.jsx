@@ -14,11 +14,7 @@ function Table({ data }) {
 		console.log(data[ind]);
 	};
 
-	const tableColumns = columns.map((column, i) => (
-		<th className="capitalize" key={i}>
-			{column}
-		</th>
-	));
+	const tableColumns = columns.map((column, i) => <th key={i}>{column}</th>);
 
 	const tableRows = values.map((row, i) => (
 		<tr onClick={() => handleRowClick(i)} key={i}>
