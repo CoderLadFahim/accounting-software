@@ -1,7 +1,13 @@
 import './TableStyles.css';
 
 function Table({ data }) {
-	const columns = Array.from(new Set(Object.keys(data[0])));
+	const getKeys = (obj) => Object.keys(obj);
+
+	const objectWithMostProps = data.reduce(
+		(a, v) => (getKeys(v).length > getKeys(a).length ? (a = v) : a),
+		0
+	);
+	const columns = getKeys(objectWithMostProps);
 	const values = data.map((v) => Object.values(v));
 
 	const handleRowClick = (serial) => {
@@ -12,24 +18,15 @@ function Table({ data }) {
 		<table className="app-table">
 			<thead>
 				<tr>
-					{columns.map((column) => (
-						<th className="capitalize">{column}</th>
+					{columns.map((column, i) => (
+						<th className="capitalize" key={i}>
+							{column}
+						</th>
 					))}
 				</tr>
 			</thead>
 
-			<tbody>
-				{values.map((row) => (
-					<tr
-						className="capitalize"
-						onClick={() => handleRowClick(row[0])}
-					>
-						{row.map((property) => (
-							<td>{property}</td>
-						))}
-					</tr>
-				))}
-			</tbody>
+			<tbody></tbody>
 		</table>
 	);
 }
