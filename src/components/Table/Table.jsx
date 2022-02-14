@@ -10,23 +10,31 @@ function Table({ data }) {
 	const columns = getKeys(objectWithMostProps);
 	const values = data.map((v) => Object.values(v));
 
-	const handleRowClick = (serial) => {
-		console.log(serial);
+	const handleRowClick = (ind) => {
+		console.log(data[ind]);
 	};
+
+	const tableColumns = columns.map((column, i) => (
+		<th className="capitalize" key={i}>
+			{column}
+		</th>
+	));
+
+	const tableRows = values.map((row, i) => (
+		<tr onClick={() => handleRowClick(i)} key={i}>
+			{row.map((property) => (
+				<td key={property}>{property}</td>
+			))}
+		</tr>
+	));
 
 	return (
 		<table className="app-table">
 			<thead>
-				<tr>
-					{columns.map((column, i) => (
-						<th className="capitalize" key={i}>
-							{column}
-						</th>
-					))}
-				</tr>
+				<tr>{tableColumns}</tr>
 			</thead>
 
-			<tbody></tbody>
+			<tbody>{tableRows}</tbody>
 		</table>
 	);
 }

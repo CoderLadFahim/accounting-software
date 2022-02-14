@@ -22,7 +22,6 @@ function App() {
 						{
 							serial: 1,
 							date: '13-2-2002',
-							age: 20,
 							name: 'Nazmul',
 							balance: 14000,
 						},
