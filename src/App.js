@@ -11,19 +11,19 @@ function App() {
 		<div className="App bg-gray-50 font-roboto">
 			<header className="App-header">
 				<AppNav />
-				<Table data={
-					[
+				<Table
+					data={[
 						{
 							serial: 0,
-								date: '14-2-2002',
-								name: 'fahim',
-								balance: 10000,
-					},
+							date: '14-2-2002',
+							name: 'fahim',
+							balance: 10000,
+						},
 						{
 							serial: 1,
-								date: '13-2-2002',
-								name: 'Nazmul',
-								balance: 14000,
+							date: '13-2-2002',
+							name: 'Nazmul',
+							balance: 14000,
 						},
 						{
 							serial: 2,
@@ -31,8 +31,8 @@ function App() {
 							name: 'Nishat',
 							balance: 12000,
 						},
-					]
-				}/>
+					]}
+				/>
 			</header>
 		</div>
 	);

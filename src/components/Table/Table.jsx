@@ -4,6 +4,10 @@ function Table({ data }) {
 	const columns = Array.from(new Set(Object.keys(data[0])));
 	const values = data.map((v) => Object.values(v));
 
+	const handleRowClick = (serial) => {
+		console.log(serial);
+	};
+
 	return (
 		<table className="app-table">
 			<thead>
@@ -16,7 +20,10 @@ function Table({ data }) {
 
 			<tbody>
 				{values.map((row) => (
-					<tr className="capitalize" >
+					<tr
+						className="capitalize"
+						onClick={() => handleRowClick(row[0])}
+					>
 						{row.map((property) => (
 							<td>{property}</td>
 						))}
