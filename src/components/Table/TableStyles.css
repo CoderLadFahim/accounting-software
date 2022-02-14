@@ -1,0 +1,22 @@
+.app-table {
+	@apply border-collapse my-2 text-base w-24 rounded-t-lg overflow-hidden shadow-lg;
+}
+.app-table thead tr {
+	@apply bg-teal-500 text-white text-left font-medium;
+}
+.app-table th,
+.app-table td {
+	@apply py-3 px-4;
+}
+.app-table tbody tr {
+	border-bottom: 1px solid #dddddd;
+}
+.app-table tbody tr:nth-of-type(even) {
+	background-color: #f3f3f3;
+}
+.app-table tbody tr:last-of-type {
+	@apply border-b border-teal-500;
+}
+.app-table tbody tr.active-row {
+	@apply font-medium text-teal-500;
+}

@@ -13,16 +13,16 @@ function Table({ data }) {
 			</thead>
 			<tbody>
 				<tr>
-					<th>0</th>
-					<th>14-2-2002</th>
-					<th>Fahim</th>
-					<th>10000</th>
+					<td>0</td>
+					<td>14-2-2002</td>
+					<td>Fahim</td>
+					<td>10000</td>
 				</tr>
 				<tr>
-					<th>1</th>
-					<th>13-2-2002</th>
-					<th>Najmul</th>
-					<th>14000</th>
+					<td>1</td>
+					<td>13-2-2002</td>
+					<td>Najmul</td>
+					<td>14000</td>
 				</tr>
 			</tbody>
 		</table>
