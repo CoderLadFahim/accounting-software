@@ -4,7 +4,7 @@ import AppButton from '../../components/AppButton.jsx';
 
 function LoginForm() {
 	return (
-		<section className="LoginForm">
+		<section className="LoginForm h-screen w-screen border border-pink-400">
 			<div className="app-form-parent">
 				<div className="heading">
 					<div className="company-branding">
@@ -19,7 +19,12 @@ function LoginForm() {
 					<AppInput labelText="Username" />
 					<AppInput labelText="Password" />
 
-					<AppButton className="rounded-md">Login</AppButton>
+					<AppButton
+						className="rounded-md"
+						onClick={() => console.log('heelo')}
+					>
+						Login
+					</AppButton>
 				</form>
 			</div>
 
