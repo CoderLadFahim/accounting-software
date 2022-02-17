@@ -28,7 +28,7 @@ function LoginForm() {
 				</form>
 			</div>
 
-			<img src="" alt="" />
+			<img src="login-bg.jpeg" alt="Form img" />
 		</section>
 	);
 }
