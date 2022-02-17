@@ -18,7 +18,7 @@ input {
 
 label::after {
 	content: '';
-	@apply inline-block absolute bottom-0 w-0 left-1/2 transform -translate-x-1/2 bg-purple-400;
+	@apply inline-block absolute bottom-0 w-0 left-1/2 transform -translate-x-1/2 bg-cyan-400;
 	height: 2px;
 	transition: 300ms;
 }
