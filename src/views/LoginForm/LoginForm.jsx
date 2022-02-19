@@ -29,8 +29,12 @@ function LoginForm() {
 				className="w-9/12 mt-12 mx-auto flex flex-col justify-between text-center gap-y-12"
 			>
 				<h1 className="text-xl text-gray-700">Login to your account</h1>
-				<AppInput placeholder="Username"></AppInput>
-				<AppInput placeholder="Password"></AppInput>
+				<AppInput placeholder="Username" required></AppInput>
+				<AppInput
+					placeholder="Password"
+					type="password"
+					required
+				></AppInput>
 
 				<AppButton className="transition-none">
 					<span className="font-bold">Login</span>
