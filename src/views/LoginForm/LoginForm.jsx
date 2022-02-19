@@ -48,7 +48,7 @@ function LoginForm() {
 	};
 
 	return (
-		<section className="LoginForm h-screen w-screen bg-gray-100 xl:flex overflow-y-hidden">
+		<section className="LoginForm h-screen w-screen bg-gray-100 xl:flex xl:overflow-y-hidden">
 			<div className="page-hero xl:order-last xl:w-2/5 xl:h-screen xl:w-5/12">
 				<div
 					className="img w-full h-64 bg-cover brightness-75 shadow xl:h-full"
