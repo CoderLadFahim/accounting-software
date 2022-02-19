@@ -1,9 +1,13 @@
 import './LoginFormStyles.css';
+import { useState } from 'react';
 import AppInput from '../../components/AppInput/AppInput.jsx';
 import AppButton from '../../components/AppButton.jsx';
 import loginFormImg from './login-bg.jpeg';
 
 function LoginForm() {
+	const [username, setUsername] = useState('');
+	const [password, setPassword] = useState('');
+
 	return (
 		<section className="LoginForm h-screen w-screen bg-gray-100">
 			<div className="page-hero">
@@ -30,18 +34,24 @@ function LoginForm() {
 			>
 				<h1 className="text-xl text-gray-700">Login to your account</h1>
 				<AppInput
+					onChange={(e) => setUsername(e.target.value)}
 					className="rounded-lg"
 					placeholder="Username"
 					required
 				></AppInput>
+
 				<AppInput
+					onChange={(e) => setPassword(e.target.value)}
 					className="rounded-lg"
 					placeholder="Password"
 					type="password"
 					required
 				></AppInput>
 
-				<AppButton className="transition-none">
+				<AppButton
+					className="transition-none"
+					disabled={!username || !password}
+				>
 					<span className="font-bold">Login</span>
 				</AppButton>
 			</form>
