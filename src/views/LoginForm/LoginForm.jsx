@@ -5,8 +5,8 @@ import AppButton from '../../components/AppButton.jsx';
 import loginFormImg from './login-bg.jpeg';
 
 function LoginForm() {
-	const [username, setUsername] = useState('');
-	const [password, setPassword] = useState('');
+	const [username, setUsername] = useState('admin@gmail.com');
+	const [password, setPassword] = useState('123456');
 
 	return (
 		<section className="LoginForm h-screen w-screen bg-gray-100">
@@ -35,6 +35,7 @@ function LoginForm() {
 				<h1 className="text-xl text-gray-700">Login to your account</h1>
 				<AppInput
 					onChange={(e) => setUsername(e.target.value)}
+					value={username}
 					className="rounded-lg"
 					placeholder="Username"
 					required
@@ -42,6 +43,7 @@ function LoginForm() {
 
 				<AppInput
 					onChange={(e) => setPassword(e.target.value)}
+					value={password}
 					className="rounded-lg"
 					placeholder="Password"
 					type="password"
