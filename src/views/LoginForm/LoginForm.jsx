@@ -3,18 +3,46 @@ import { useState } from 'react';
 import AppInput from '../../components/AppInput/AppInput.jsx';
 import AppButton from '../../components/AppButton.jsx';
 import loginFormImg from './login-bg.jpeg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons';
 
 function LoginForm() {
 	const [username, setUsername] = useState('admin@gmail.com');
 	const [password, setPassword] = useState('123456');
 
+	// this state controls the validity of the form, remains null at first
+	const [credentialsInvalid, setCredentialsInvalid] = useState(null);
+
+	const formMsg =
+		credentialsInvalid === true ? (
+			<h1 className="text-red-400 font-bold text-xl text-left">
+				<FontAwesomeIcon icon={faCircleExclamation} className="mr-3" />
+				Invalid credentials
+			</h1>
+		) : (
+			<h1 className="text-xl text-gray-700 md:text-left">
+				Login to your account
+			</h1>
+		);
+
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		const [usernameInput, passwordInput] = e.target.elements;
-		const {value: userEnteredUsername } = usernameInput;
-		const {value: userEnteredPassword } = passwordInput;
+		const { value: userEnteredUsername } = usernameInput;
+		const { value: userEnteredPassword } = passwordInput;
 
-		console.log({userEnteredUsername, userEnteredPassword});
+		const validCredentials = {
+			username: 'admin@gmail.com',
+			password: '123456',
+		};
+
+		if (
+			userEnteredUsername === validCredentials.username &&
+			userEnteredPassword === validCredentials.password
+		)
+			return alert('Valid credentials entered');
+
+		return setCredentialsInvalid(true);
 	};
 
 	return (
@@ -42,21 +70,29 @@ function LoginForm() {
 				onSubmit={handleSubmit}
 				className="w-9/12 mt-12 mx-auto flex flex-col justify-between text-center gap-y-12 sm:w-7/12 md:w-6/12 lg:h-1/3 lg:mt-28"
 			>
-				<h1 className="text-xl text-gray-700 md:text-left">
-					Login to your account
-				</h1>
+				{formMsg}
 				<AppInput
-					onChange={(e) => setUsername(e.target.value)}
+					onChange={(e) => {
+						setUsername(e.target.value);
+						setCredentialsInvalid(null);
+					}}
 					value={username}
-					className="rounded-lg lg:py-3 lg:px-4 lg:text-xl"
+					className={`rounded-lg lg:py-3 lg:px-4 lg:text-xl lg:border-2 ${
+						credentialsInvalid === true && 'valid:border-red-400'
+					}`}
 					placeholder="Username"
 					required
 				></AppInput>
 
 				<AppInput
-					onChange={(e) => setPassword(e.target.value)}
+					onChange={(e) => {
+						setPassword(e.target.value);
+						setCredentialsInvalid(null);
+					}}
 					value={password}
-					className="rounded-lg lg:py-3 lg:px-4 lg:text-xl"
+					className={`rounded-lg lg:py-3 lg:px-4 lg:text-xl lg:border-2 ${
+						credentialsInvalid === true && 'valid:border-red-400'
+					}`}
 					placeholder="Password"
 					type="password"
 					required
@@ -64,7 +100,7 @@ function LoginForm() {
 
 				<AppButton
 					className="transition-none lg:py-3 lg:text-xl"
-					disabled={!username || !password}
+					disabled={!username || !password || credentialsInvalid}
 				>
 					<span className="font-bold">Login</span>
 				</AppButton>
