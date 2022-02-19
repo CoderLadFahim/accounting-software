@@ -16,7 +16,7 @@ function LoginForm() {
 					style={{ backgroundImage: `url(${loginFormImg})` }}
 				></div>
 				{/* <img src="login-bg.jpeg" alt="" className="shadow brightness-50" /> */}
-				<div className="branding bg-white w-9/12 py-5 mx-auto rounded-xl shadow flex items-center justify-center gap-3 relative bottom-10 sm:w-7/12">
+				<div className="branding bg-white w-9/12 py-5 mx-auto rounded-xl shadow flex items-center justify-center gap-3 relative bottom-10 sm:gap-6 sm:w-7/12 md:w-6/12">
 					<img
 						src="logos_temp/Logo.png"
 						alt="Brand Logo"
@@ -30,13 +30,15 @@ function LoginForm() {
 
 			<form
 				action=""
-				className="w-9/12 mt-12 mx-auto flex flex-col justify-between text-center gap-y-12 sm:w-7/12"
+				className="w-9/12 mt-12 mx-auto flex flex-col justify-between text-center gap-y-12 sm:w-7/12 md:w-6/12 lg:h-1/3 lg:mt-28"
 			>
-				<h1 className="text-xl text-gray-700">Login to your account</h1>
+				<h1 className="text-xl text-gray-700 md:text-left">
+					Login to your account
+				</h1>
 				<AppInput
 					onChange={(e) => setUsername(e.target.value)}
 					value={username}
-					className="rounded-lg"
+					className="rounded-lg lg:py-3 lg:px-4 lg:text-xl"
 					placeholder="Username"
 					required
 				></AppInput>
@@ -44,14 +46,14 @@ function LoginForm() {
 				<AppInput
 					onChange={(e) => setPassword(e.target.value)}
 					value={password}
-					className="rounded-lg"
+					className="rounded-lg lg:py-3 lg:px-4 lg:text-xl"
 					placeholder="Password"
 					type="password"
 					required
 				></AppInput>
 
 				<AppButton
-					className="transition-none"
+					className="transition-none lg:py-3 lg:text-xl"
 					disabled={!username || !password}
 				>
 					<span className="font-bold">Login</span>
