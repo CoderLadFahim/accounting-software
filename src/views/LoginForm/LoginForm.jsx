@@ -48,7 +48,7 @@ function LoginForm() {
 
 	return (
 		<section className="LoginForm h-screen w-screen bg-gray-100 xl:flex overflow-y-hidden">
-			<div className="page-hero xl:order-last xl:w-2/5 xl:h-screen">
+			<div className="page-hero xl:order-last xl:w-2/5 xl:h-screen xl:w-5/12">
 				<div
 					className="img w-full h-64 bg-cover brightness-75 shadow xl:h-full"
 					style={{ backgroundImage: `url(${loginFormImg})` }}
@@ -72,15 +72,16 @@ function LoginForm() {
 				sm:w-7/12 
 				md:w-6/12 
 				lg:h-1/3 lg:mt-28 
-				xl:mt-12 xl:w-1/2 xl:w-2/5 xl:h-screen xl:gap-y-16 xl:justify-center"
+				xl:mt-12 xl:w-1/2 xl:w-2/5 xl:h-screen xl:gap-y-16 xl:justify-center 
+				3xl:w-1/3"
 			>
 				<div className="hidden xl:flex items-center gap-x-5 transform -translate-y-12">
 					<img
 						src="logos_temp/Logo.png"
 						alt="Brand Logo"
-						className="h-12 w-12"
+						className="h-14 w-14"
 					/>
-					<h3 className="text-slate-700 text-3xl">
+					<h3 className="text-slate-700 text-4xl">
 						Classic IT ERP Software
 					</h3>
 				</div>
