@@ -54,13 +54,19 @@ function LoginForm() {
 					className="img w-full h-64 bg-cover brightness-75 shadow xl:h-full"
 					style={{ backgroundImage: `url(${loginFormImg})` }}
 				></div>
-				<div className="branding bg-white w-9/12 py-5 mx-auto rounded-xl shadow flex items-center justify-center gap-3 relative bottom-10 sm:gap-6 sm:w-7/12 md:w-6/12 xl:hidden">
+				<div
+					className="branding bg-white w-9/12 py-5 mx-auto rounded-xl shadow flex items-center justify-center gap-6 relative bottom-10 
+					sm:gap-6 sm:w-7/12 
+					md:w-6/12 md:gap-9
+					lg:gap-6 
+					xl:hidden"
+				>
 					<img
 						src="logos_temp/Logo.png"
 						alt="Brand Logo"
 						className="h-9 w-9"
 					/>
-					<h3 className="text-slate-700 text-xl">
+					<h3 className="text-slate-700 text-lg md:text-xl lg:text-2xl">
 						Classic IT ERP Software
 					</h3>
 				</div>
