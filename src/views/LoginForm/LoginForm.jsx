@@ -10,7 +10,7 @@ function LoginForm() {
 	const [username, setUsername] = useState('admin@gmail.com');
 	const [password, setPassword] = useState('123456');
 
-	// this state controls the validity of the form, remains null at first
+	// this state controls the validity of the form, remains null at first, gets changed to true from handleSubmit
 	const [credentialsInvalid, setCredentialsInvalid] = useState(null);
 
 	const formMsg =
