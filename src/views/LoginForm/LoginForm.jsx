@@ -8,6 +8,15 @@ function LoginForm() {
 	const [username, setUsername] = useState('admin@gmail.com');
 	const [password, setPassword] = useState('123456');
 
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		const [usernameInput, passwordInput] = e.target.elements;
+		const {value: userEnteredUsername } = usernameInput;
+		const {value: userEnteredPassword } = passwordInput;
+
+		console.log({userEnteredUsername, userEnteredPassword});
+	};
+
 	return (
 		<section className="LoginForm h-screen w-screen bg-gray-100">
 			<div className="page-hero">
@@ -30,6 +39,7 @@ function LoginForm() {
 
 			<form
 				action=""
+				onSubmit={handleSubmit}
 				className="w-9/12 mt-12 mx-auto flex flex-col justify-between text-center gap-y-12 sm:w-7/12 md:w-6/12 lg:h-1/3 lg:mt-28"
 			>
 				<h1 className="text-xl text-gray-700 md:text-left">
