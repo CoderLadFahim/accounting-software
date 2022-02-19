@@ -27,6 +27,7 @@ function LoginForm() {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
+
 		const [usernameInput, passwordInput] = e.target.elements;
 		const { value: userEnteredUsername } = usernameInput;
 		const { value: userEnteredPassword } = passwordInput;
