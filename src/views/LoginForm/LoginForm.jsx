@@ -20,7 +20,7 @@ function LoginForm() {
 				Invalid credentials
 			</h1>
 		) : (
-			<h1 className="text-xl text-gray-700 md:text-left">
+			<h1 className="text-xl text-gray-700 md:text-left xl:text-4xl xl:font-bold">
 				Login to your account
 			</h1>
 		);
@@ -53,7 +53,6 @@ function LoginForm() {
 					className="img w-full h-64 bg-cover brightness-75 shadow xl:h-full"
 					style={{ backgroundImage: `url(${loginFormImg})` }}
 				></div>
-				{/* <img src="login-bg.jpeg" alt="" className="shadow brightness-50" /> */}
 				<div className="branding bg-white w-9/12 py-5 mx-auto rounded-xl shadow flex items-center justify-center gap-3 relative bottom-10 sm:gap-6 sm:w-7/12 md:w-6/12 xl:hidden">
 					<img
 						src="logos_temp/Logo.png"
@@ -69,7 +68,11 @@ function LoginForm() {
 			<form
 				action=""
 				onSubmit={handleSubmit}
-				className="w-9/12 mt-12 mx-auto flex flex-col justify-between text-center gap-y-12 sm:w-7/12 md:w-6/12 lg:h-1/3 lg:mt-28 xl:w-1/2 border xl:h-screen"
+				className="w-9/12 mt-12 mx-auto flex flex-col justify-between text-center gap-y-12 
+				sm:w-7/12 
+				md:w-6/12 
+				lg:h-1/3 lg:mt-28 
+				xl:mt-12 xl:w-1/2 xl:w-2/5 xl:h-screen xl:gap-y-16 xl:justify-center"
 			>
 				{formMsg}
 				<AppInput
