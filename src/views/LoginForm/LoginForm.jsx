@@ -13,6 +13,7 @@ function LoginForm() {
 	// this state controls the validity of the form, remains null at first, gets changed to true from handleSubmit
 	const [credentialsInvalid, setCredentialsInvalid] = useState(null);
 
+	// jsx that sits above the inputs
 	const formMsg =
 		credentialsInvalid === true ? (
 			<h1 className="text-red-400 font-bold text-xl text-left">
@@ -75,7 +76,7 @@ function LoginForm() {
 				xl:mt-12 xl:w-1/2 xl:w-2/5 xl:h-screen xl:gap-y-16 xl:justify-center 
 				3xl:w-1/3"
 			>
-				<div className="hidden xl:flex items-center gap-x-5 transform -translate-y-12">
+				<div className="branding hidden xl:flex items-center gap-x-5 transform -translate-y-12">
 					<img
 						src="logos_temp/Logo.png"
 						alt="Brand Logo"
