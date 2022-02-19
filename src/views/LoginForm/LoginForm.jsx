@@ -47,14 +47,14 @@ function LoginForm() {
 	};
 
 	return (
-		<section className="LoginForm h-screen w-screen bg-gray-100">
-			<div className="page-hero">
+		<section className="LoginForm h-screen w-screen bg-gray-100 xl:flex">
+			<div className="page-hero xl:order-last xl:w-2/5 xl:h-screen">
 				<div
-					className="img w-full h-64 bg-cover brightness-75 shadow"
+					className="img w-full h-64 bg-cover brightness-75 shadow xl:h-full"
 					style={{ backgroundImage: `url(${loginFormImg})` }}
 				></div>
 				{/* <img src="login-bg.jpeg" alt="" className="shadow brightness-50" /> */}
-				<div className="branding bg-white w-9/12 py-5 mx-auto rounded-xl shadow flex items-center justify-center gap-3 relative bottom-10 sm:gap-6 sm:w-7/12 md:w-6/12">
+				<div className="branding bg-white w-9/12 py-5 mx-auto rounded-xl shadow flex items-center justify-center gap-3 relative bottom-10 sm:gap-6 sm:w-7/12 md:w-6/12 xl:hidden">
 					<img
 						src="logos_temp/Logo.png"
 						alt="Brand Logo"
@@ -69,7 +69,7 @@ function LoginForm() {
 			<form
 				action=""
 				onSubmit={handleSubmit}
-				className="w-9/12 mt-12 mx-auto flex flex-col justify-between text-center gap-y-12 sm:w-7/12 md:w-6/12 lg:h-1/3 lg:mt-28"
+				className="w-9/12 mt-12 mx-auto flex flex-col justify-between text-center gap-y-12 sm:w-7/12 md:w-6/12 lg:h-1/3 lg:mt-28 xl:w-1/2 border xl:h-screen"
 			>
 				{formMsg}
 				<AppInput
