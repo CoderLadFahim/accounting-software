@@ -12,7 +12,7 @@ function LoginForm() {
 					style={{ backgroundImage: `url(${loginFormImg})` }}
 				></div>
 				{/* <img src="login-bg.jpeg" alt="" className="shadow brightness-50" /> */}
-				<div className="branding bg-white w-9/12 py-5 mx-auto rounded-xl shadow flex items-center justify-center gap-3 relative bottom-10">
+				<div className="branding bg-white w-9/12 py-5 mx-auto rounded-xl shadow flex items-center justify-center gap-3 relative bottom-10 sm:w-7/12">
 					<img
 						src="logos_temp/Logo.png"
 						alt="Brand Logo"
@@ -26,11 +26,16 @@ function LoginForm() {
 
 			<form
 				action=""
-				className="w-9/12 mt-12 mx-auto flex flex-col justify-between text-center gap-y-12"
+				className="w-9/12 mt-12 mx-auto flex flex-col justify-between text-center gap-y-12 sm:w-7/12"
 			>
 				<h1 className="text-xl text-gray-700">Login to your account</h1>
-				<AppInput placeholder="Username" required></AppInput>
 				<AppInput
+					className="rounded-lg"
+					placeholder="Username"
+					required
+				></AppInput>
+				<AppInput
+					className="rounded-lg"
 					placeholder="Password"
 					type="password"
 					required
