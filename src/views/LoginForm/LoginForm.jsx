@@ -6,7 +6,7 @@ import loginFormImg from './login-bg.jpeg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons';
 
-function LoginForm() {
+function LoginForm({ userAuthenticator }) {
 	const [username, setUsername] = useState('admin@gmail.com');
 	const [password, setPassword] = useState('123456');
 
@@ -42,7 +42,7 @@ function LoginForm() {
 			userEnteredUsername === validCredentials.username &&
 			userEnteredPassword === validCredentials.password
 		)
-			return alert('Valid credentials entered');
+			return userAuthenticator();
 
 		return setCredentialsInvalid(true);
 	};
