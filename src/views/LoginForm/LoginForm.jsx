@@ -1,12 +1,23 @@
 import './LoginFormStyles.css';
 import { useState } from 'react';
+
+// Redux hooks and actions
+import { useDispatch } from 'react-redux';
+import { login } from '../../features/auth/authSlice.js';
+
+// Components
 import AppInput from '../../components/AppInput/AppInput.jsx';
 import AppButton from '../../components/AppButton.jsx';
 import loginFormImg from './login-bg.jpeg';
+
+// Fontawesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons';
 
-function LoginForm({ userAuthenticator }) {
+function LoginForm() {
+	const dispatch = useDispatch();
+
+	// AppInput values
 	const [username, setUsername] = useState('admin@gmail.com');
 	const [password, setPassword] = useState('123456');
 
@@ -42,7 +53,7 @@ function LoginForm({ userAuthenticator }) {
 			userEnteredUsername === validCredentials.username &&
 			userEnteredPassword === validCredentials.password
 		)
-			return userAuthenticator();
+			return dispatch(login());
 
 		return setCredentialsInvalid(true);
 	};
