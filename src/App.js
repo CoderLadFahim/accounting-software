@@ -14,13 +14,13 @@ function App() {
 
 	return (
 		<Router>
-			<div className="App bg-gray-50 font-roboto">
+			<div className="App bg-gray-50 font-roboto mt-24">
 				{!userIsAuthenticated ? (
 					<LoginForm />
 				) : (
 					<>
 						<AppNav />
-						<SideBar />
+						{/* <SideBar /> */}
 
 						<Routes>
 							<Route path="add-category" element={<AddCategory />} />
