@@ -4,10 +4,7 @@ import AppButton from '../../components/AppButton.jsx';
 
 function AddCategory() {
 	return (
-		<form
-			action=""
-			className="w-9/12 mx-auto mb-12 space-y-10 sm:mt-20 sm:w-7/12 md:w-6/12 lg:w-4/12"
-		>
+		<form action="" className="w-9/12 mx-auto mb-12 space-y-10">
 			<h1 className="form-title text-2xl text-gray-700 pt-4 pb-2 border-b-2 border-slate-200 sm:mb-16 lg:mb-24">
 				Add Category
 			</h1>
@@ -34,8 +31,10 @@ function AddCategory() {
 					<AppInput type="file" className="border-none border" />
 				</div>
 
+				<hr />
+
 				<div className="form-field">
-					<label htmlFor="category-name">Sub category</label>
+					<label htmlFor="category-name">Sub category name:</label>
 					<AppInput type="text" id="category-name" required />
 				</div>
 
