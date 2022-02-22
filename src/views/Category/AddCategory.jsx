@@ -1,32 +1,20 @@
-import './App.css';
+import AppInput from '../../components/AppInput/AppInput.jsx';
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import { selectUserIsAuthenticated } from './features/auth/authSlice.js';
-
-import AppNav from './components/AppNav/AppNav.jsx';
-import SideBar from './components/SideBar/SideBar.jsx';
-import LoginForm from './views/LoginForm/LoginForm.jsx';
-
-function App() {
-	const userIsAuthenticated = useSelector(selectUserIsAuthenticated);
-
+function AddCategory() {
 	return (
-		<Router>
-			<div className="App bg-gray-50 font-roboto">
-				{!userIsAuthenticated ? (
-					<LoginForm />
-				) : (
-					<>
-						<AppNav />
-						<SideBar />
-
-						<Routes>{/* routes go here */}</Routes>
-					</>
-				)}
+		<form action="">
+			<h1>Add Category</h1>
+			<div className="form-field">
+				<label htmlFor="category-name">Category Name*:</label>
+				<AppInput
+					type="text"
+					id="category-name"
+					placeholder="Category name"
+					required
+				/>
 			</div>
-		</Router>
+		</form>
 	);
 }
 
-export default App;
+export default AddCategory;
