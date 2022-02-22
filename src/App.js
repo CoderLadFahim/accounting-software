@@ -14,20 +14,18 @@ function App() {
 
 	return (
 		<Router>
-			<div className="App bg-gray-50 font-roboto mt-20">
-				{!userIsAuthenticated ? (
-					<LoginForm />
-				) : (
-					<>
-						<AppNav />
-						{/* <SideBar /> */}
+			{!userIsAuthenticated ? (
+				<LoginForm />
+			) : (
+				<div className="App mt-16">
+					<AppNav />
+					{/* <SideBar /> */}
 
-						<Routes>
-							<Route path="add-category" element={<AddCategory />} />
-						</Routes>
-					</>
-				)}
-			</div>
+					<Routes>
+						<Route path="add-category" element={<AddCategory />} />
+					</Routes>
+				</div>
+			)}
 		</Router>
 	);
 }
