@@ -14,7 +14,7 @@ function App() {
 
 	return (
 		<Router>
-			<div className="App bg-gray-50 font-roboto mt-24">
+			<div className="App bg-gray-50 font-roboto mt-20">
 				{!userIsAuthenticated ? (
 					<LoginForm />
 				) : (
