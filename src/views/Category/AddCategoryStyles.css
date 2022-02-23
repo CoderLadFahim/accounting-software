@@ -1,5 +1,9 @@
+.form-container {
+	@apply mx-auto sm:w-9/12 lg:w-6/12 2xl:w-5/12 3xl:w-4/12;
+}
+
 .form-field {
-	@apply text-left space-y-1 text-gray-600;
+	@apply text-left space-y-1 text-gray-600 mx-auto;
 }
 
 .form-field label {
