@@ -2,7 +2,7 @@ import './App.css';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { selectUserIsAuthenticated } from './features/auth/authSlice.js';
+import { selectUserIsAuthenticated } from './features/Auth/authSlice.js';
 
 import AppNav from './components/AppNav/AppNav.jsx';
 import SideBar from './components/SideBar/SideBar.jsx';
