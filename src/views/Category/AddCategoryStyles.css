@@ -1,3 +1,7 @@
 .form-field {
 	@apply text-left space-y-1 text-gray-600;
 }
+
+.form-field label {
+	@apply font-bold;
+}
