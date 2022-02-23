@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 // Redux hooks and actions
 import { useDispatch } from 'react-redux';
-import { login } from '../../features/auth/authSlice.js';
+import { login } from '../../features/Auth/authSlice.js';
 
 // Components
 import AppInput from '../../components/AppInput/AppInput.jsx';
