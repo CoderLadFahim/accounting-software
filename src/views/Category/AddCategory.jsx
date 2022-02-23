@@ -5,7 +5,7 @@ import AppButton from '../../components/AppButton.jsx';
 function AddCategory() {
 	return (
 		<form action="" className="w-9/12 mx-auto mb-12 space-y-10">
-			<h1 className="form-title text-2xl text-gray-700 pt-4 pb-2 border-b-2 border-slate-200 sm:mb-16 lg:mb-24">
+			<h1 className="form-title text-2xl text-gray-700 mx-auto pt-4 pb-2 border-b-2 border-slate-200 sm:mb-16 lg:mb-24 lg:w-7/12 xl:w-5/12">
 				Add Category
 			</h1>
 
