@@ -7,7 +7,7 @@ function SideBar() {
 		<div
 			id="side-nav"
 			className="absolute left-0 w-9/12 h-screen bg-gray-700 text-gray-50 z-10
-			sm:w-7/12 md:w-4/12 xl:w-3/12 2xl:w-1/6"
+			sm:w-7/12 md:w-4/12 xl:hidden xl:w-3/12 2xl:w-1/6"
 		>
 			<div className="user-info py-3 flex items-center pl-4 gap-3 bg-slate-900">
 				<img
