@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import { selectUserIsAuthenticated } from './features/Auth/authSlice.js';
 
 import AppNav from './components/AppNav/AppNav.jsx';
-// import SideBar from './components/SideBar/SideBar.jsx';
+import SideBar from './components/SideBar/SideBar.jsx';
 import LoginForm from './views/LoginForm/LoginForm.jsx';
 import AddCategory from './views/Category/AddCategory.jsx';
 
@@ -19,7 +19,7 @@ function App() {
 			) : (
 				<div className="App mt-16">
 					<AppNav />
-					{/* <SideBar /> */}
+					<SideBar />
 
 					<Routes>
 						<Route path="add-category" element={<AddCategory />} />
