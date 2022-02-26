@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect } from 'react';
 
 // redux
 import { useSelector, useDispatch } from 'react-redux';
@@ -16,12 +16,16 @@ function NavLink({ children, icon, navLinkName }) {
 	const dispatch = useDispatch();
 	const currentLinkActive = activeMobileDropdown === navLinkName;
 
+	useEffect(() => {
+		console.log(activeMobileDropdown);
+	}, [activeMobileDropdown]);
+
 	return (
 		<li
 			className={`nav-link bg-gray-800 py-2 text-left text-base relative hover:bg-gray-700 cursor-pointer pl-4 last:border-b last:border-slate-300 ${
 				currentLinkActive ? 'active' : ''
 			}`}
-			onClick={() => dispatch(setActiveMobileDropdown())}
+			onClick={() => dispatch(setActiveMobileDropdown(navLinkName))}
 		>
 			<div className="nav-link-content space-x-3">
 				{icon}

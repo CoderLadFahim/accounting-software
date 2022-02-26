@@ -8,7 +8,7 @@ export const navigationSlice = createSlice({
 	name: 'navigation',
 	initialState,
 	reducers: {
-		setActiveMobileDropdown: (state, payload) => {
+		setActiveMobileDropdown: (state, { payload }) => {
 			state.activeMobileDropdown = payload;
 		},
 	},
