@@ -1,4 +1,5 @@
 import './DropdownMenuStyles.css';
+import { useState } from 'react';
 
 import NavLink from './NavLink.jsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -18,16 +19,18 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 function DropdownMenu() {
+	const [activeDropdownLink, setActiveDropdownLink] = useState('');
+
 	return (
 		<ul className="nav-links">
 			<NavLink
 				icon={<FontAwesomeIcon icon={faHome} className="nav-icon" />}
-				spanText="Home"
+				linkName="Home"
 			/>
 
 			<NavLink
 				icon={<FontAwesomeIcon icon={faAddressBook} className="nav-icon" />}
-				spanText="Contact"
+				linkName="Contact"
 			>
 				<ul>
 					<li>Customers</li>
@@ -38,7 +41,7 @@ function DropdownMenu() {
 
 			<NavLink
 				icon={<FontAwesomeIcon icon={faBoxes} className="nav-icon" />}
-				spanText="Products"
+				linkName="Products"
 			>
 				<ul>
 					<li>Product List</li>
@@ -54,7 +57,7 @@ function DropdownMenu() {
 				icon={
 					<FontAwesomeIcon icon={faShoppingCart} className="nav-icon" />
 				}
-				spanText="Sales"
+				linkName="Sales"
 			>
 				<ul>
 					<li>Sales List</li>
@@ -74,7 +77,7 @@ function DropdownMenu() {
 
 			<NavLink
 				icon={<FontAwesomeIcon icon={faMoneyCheck} className="nav-icon" />}
-				spanText="Purchases"
+				linkName="Purchases"
 			>
 				<ul>
 					<li>Purchases List</li>
@@ -88,7 +91,7 @@ function DropdownMenu() {
 				icon={
 					<FontAwesomeIcon icon={faMoneyBillWave} className="nav-icon" />
 				}
-				spanText="Payment"
+				linkName="Payment"
 			>
 				<ul>
 					<li>Received</li>
@@ -99,7 +102,7 @@ function DropdownMenu() {
 
 			<NavLink
 				icon={<FontAwesomeIcon icon={faWallet} className="nav-icon" />}
-				spanText="Expenses"
+				linkName="Expenses"
 			>
 				<ul>
 					<li>Expense List</li>
@@ -110,7 +113,7 @@ function DropdownMenu() {
 
 			<NavLink
 				icon={<FontAwesomeIcon icon={faPiggyBank} className="nav-icon" />}
-				spanText="Banks"
+				linkName="Banks"
 			>
 				<ul>
 					<li>Manage Accounts</li>
@@ -120,7 +123,7 @@ function DropdownMenu() {
 
 			<NavLink
 				icon={<FontAwesomeIcon icon={faLanguage} className="nav-icon" />}
-				spanText="Language"
+				linkName="Language"
 			>
 				<ul>
 					<li>English</li>
@@ -130,7 +133,7 @@ function DropdownMenu() {
 
 			<NavLink
 				icon={<FontAwesomeIcon icon={faUser} className="nav-icon" />}
-				spanText="Users"
+				linkName="Users"
 			>
 				<ul>
 					<li>Users</li>
@@ -139,7 +142,7 @@ function DropdownMenu() {
 			</NavLink>
 			<NavLink
 				icon={<FontAwesomeIcon icon={faFileAlt} className="nav-icon" />}
-				spanText="Reports"
+				linkName="Reports"
 			>
 				<ul>
 					<li>Profit / Loss Report</li>
@@ -164,7 +167,7 @@ function DropdownMenu() {
 			</NavLink>
 			<NavLink
 				icon={<FontAwesomeIcon icon={faWrench} className="nav-icon" />}
-				spanText="Settings"
+				linkName="Settings"
 			>
 				<ul>
 					<li>Business Settings</li>
