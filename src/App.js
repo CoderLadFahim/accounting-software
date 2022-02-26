@@ -7,7 +7,8 @@ import { selectUserIsAuthenticated } from './features/Auth/authSlice.js';
 import AppNav from './components/AppNav/AppNav.jsx';
 import SideBar from './components/SideBar/SideBar.jsx';
 import LoginForm from './views/LoginForm/LoginForm.jsx';
-import AddCategory from './views/Category/AddCategory.jsx';
+import AddCategory from './views/AddCategory/AddCategory.jsx';
+import AddProduct from './views/AddProduct/AddProduct.jsx';
 
 function App() {
 	const userIsAuthenticated = useSelector(selectUserIsAuthenticated);
@@ -22,7 +23,8 @@ function App() {
 					<SideBar />
 
 					<Routes>
-						<Route path="add-category" element={<AddCategory />} />
+						<Route path="/add-category" element={<AddCategory />} />
+						<Route path="/add-product" element={<AddProduct />} />
 					</Routes>
 				</div>
 			)}
