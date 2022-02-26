@@ -7,6 +7,7 @@ import purchaseReducer from '../features/Purchase/purchaseSlice';
 import categoryReducer from '../features/Category/categorySlice';
 import customerReducer from '../features/Customer/customerSlice';
 import supplierReducer from '../features/Supplier/supplierSlice';
+import navigationReducer from '../features/Navigation/navigationSlice';
 
 export const store = configureStore({
 	reducer: {
@@ -18,5 +19,6 @@ export const store = configureStore({
 		category: categoryReducer,
 		customer: customerReducer,
 		supplier: supplierReducer,
+		navigation: navigationReducer,
 	},
 });
