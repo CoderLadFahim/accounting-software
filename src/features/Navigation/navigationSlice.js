@@ -1,18 +1,22 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-	navigation: [],
+	activeMobileDropdown: 'Home',
 };
 
 export const navigationSlice = createSlice({
 	name: 'navigation',
 	initialState,
-	reducers: {},
+	reducers: {
+		setActiveMobileDropdown: (state, payload) => {
+			state.activeMobileDropdown = payload;
+		},
+	},
 });
 
-// export const { login, logout } = navigationSlice.actions;
+export const { setActiveMobileDropdown } = navigationSlice.actions;
 
-// export const selectUserIsAuthenticated = (state) =>
-// 	state.navigation.userIsAuthenticated;
+export const selectActiveMobileDropdown = (state) =>
+	state.navigation.activeMobileDropdown;
 
 export default navigationSlice.reducer;

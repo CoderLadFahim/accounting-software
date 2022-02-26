@@ -18,7 +18,7 @@ export const store = configureStore({
 		purchase: purchaseReducer,
 		category: categoryReducer,
 		customer: customerReducer,
-		supplier: supplierReducer,
 		navigation: navigationReducer,
+		supplier: supplierReducer,
 	},
 });
