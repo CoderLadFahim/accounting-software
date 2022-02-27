@@ -2,12 +2,13 @@ import './SideBarStyles.css';
 
 import DropdownMenu from './DropdownMenu.jsx';
 
-function SideBar() {
+function SideBar({ showSidebar }) {
 	return (
 		<div
 			id="side-nav"
-			className="absolute top-0 left-0 w-9/12 h-screen bg-gray-700 text-gray-50 z-10
-			sm:w-7/12 md:w-4/12 xl:hidden xl:w-3/12 2xl:w-1/6"
+			className={`transform transition duration-300 absolute top-0 left-0 w-9/12 h-screen bg-gray-700 text-gray-50 z-10 sm:w-7/12 md:w-4/12 xl:hidden xl:w-3/12 2xl:w-1/6 ${
+				!showSidebar && 'hide'
+			}`}
 		>
 			<div className="user-info py-3 flex items-center pl-4 gap-3 bg-slate-900">
 				<img

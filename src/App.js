@@ -1,5 +1,6 @@
 import './App.css';
 
+import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { selectUserIsAuthenticated } from './features/Auth/authSlice.js';
@@ -15,6 +16,7 @@ import AddProduct from './views/AddProduct/AddProduct.jsx';
 
 function App() {
 	const userIsAuthenticated = useSelector(selectUserIsAuthenticated);
+	const [showSidebar, setShowSidebar] = useState(false);
 
 	return (
 		<Router>
@@ -23,10 +25,13 @@ function App() {
 			) : (
 				<div className="App mt-16">
 					<AppNav />
-					<SideBar />
-					<button className="w-10 h-10 rounded-full shadow xl:hidden bg-green-400 absolute bottom-5 right-5">
+					<SideBar showSidebar={showSidebar} />
+					<button
+						className="w-10 h-10 rounded-full shadow-md xl:hidden bg-green-400 absolute bottom-5 right-5"
+						onClick={() => setShowSidebar((prev) => !prev)}
+					>
 						<FontAwesomeIcon
-							icon={faXmark}
+							icon={showSidebar ? faXmark : faBars}
 							className="text-white transform scale-125"
 						/>
 					</button>
