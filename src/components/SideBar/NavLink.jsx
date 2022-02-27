@@ -12,7 +12,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
 function NavLink({ children, icon, navLinkName }) {
-	const activeMobileDropdown = useSelector(selectActiveMobileDropdown);
+	const activeMobileDropdown = useSelector(
+		(state) => state.navigation.activeMobileDropdown
+	);
 	const dispatch = useDispatch();
 	const currentLinkActive = activeMobileDropdown === navLinkName;
 

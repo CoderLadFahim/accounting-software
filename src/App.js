@@ -2,8 +2,9 @@ import './App.css';
 
 import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { selectUserIsAuthenticated } from './features/Auth/authSlice.js';
+import { setMobileSidebarActive } from './features/Navigation/navigationSlice.js';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
@@ -15,8 +16,18 @@ import AddCategory from './views/AddCategory/AddCategory.jsx';
 import AddProduct from './views/AddProduct/AddProduct.jsx';
 
 function App() {
-	const userIsAuthenticated = useSelector(selectUserIsAuthenticated);
-	const [showSidebar, setShowSidebar] = useState(false);
+	const navSliceDispatcher = useDispatch();
+	const userIsAuthenticated = useSelector(
+		(state) => state.auth.userIsAuthenticated
+	);
+
+	const showSidebar = useSelector(
+		(state) => state.navigation.mobileSidebarActive
+	);
+
+	const setShowSidebar = () => {
+		navSliceDispatcher(setMobileSidebarActive());
+	};
 
 	return (
 		<Router>
