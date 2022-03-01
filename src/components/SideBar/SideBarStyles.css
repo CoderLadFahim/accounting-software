@@ -1,3 +1,7 @@
+.hiding-transition {
+	@apply transform transition duration-300;
+}
+
 .hide {
 	@apply -translate-x-full;
 }

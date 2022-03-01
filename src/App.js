@@ -1,9 +1,7 @@
 import './App.css';
 
-import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectUserIsAuthenticated } from './features/Auth/authSlice.js';
 import { setMobileSidebarActive } from './features/Navigation/navigationSlice.js';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -36,7 +34,10 @@ function App() {
 			) : (
 				<div className="App mt-16">
 					<AppNav />
-					<SideBar showSidebar={showSidebar} />
+					<SideBar
+						showSidebar={showSidebar}
+						hideSidebar={setShowSidebar}
+					/>
 					<button
 						className="w-10 h-10 rounded-full shadow-md xl:hidden bg-green-400 absolute bottom-5 right-5"
 						onClick={() => setShowSidebar((prev) => !prev)}
