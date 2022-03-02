@@ -5,6 +5,20 @@ import { useEffect } from 'react';
 import NavLink from './NavLink.jsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+// import {
+// 	faHome,
+// 	faAddressBook,
+// 	faBoxes,
+// 	faShoppingCart,
+// 	faMoneyCheck,
+// 	faMoneyBillWave,
+// 	faWallet,
+// 	faPiggyBank,
+// 	faUser,
+// 	faFileAlt,
+// 	faWrench,
+// } from '@fortawesome/free-solid-svg-icons';
+
 function DropdownMenu() {
 	const menus = useSelector(({ navigation }) => navigation.menus);
 
@@ -33,6 +47,10 @@ function DropdownMenu() {
 
 		return menuElement;
 	});
+
+	// useEffect(() => {
+	// 	console.log(<FontAwesomeIcon icon={'faHome'} />);
+	// }, []);
 
 	return (
 		<ul className="nav-links">

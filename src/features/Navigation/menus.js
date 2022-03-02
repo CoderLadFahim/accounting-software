@@ -19,7 +19,7 @@ const menus = [
 		icon: faAddressBook,
 		submenus: [
 			{ name: 'Customers', route: '/customers' },
-			{ name: 'Suppliers', route: '/pro' },
+			{ name: 'Suppliers', route: '/suppliers' },
 			{ name: 'Import contacts', route: '/products-imports' },
 		],
 	},
@@ -55,7 +55,7 @@ const menus = [
 	},
 	{
 		name: 'Purchases',
-		icons: faMoneyCheck,
+		icon: faMoneyCheck,
 		submenus: [
 			{ name: 'Purchases List', route: '/purchases-list' },
 			{ name: 'Add Purchase', route: '/add-purchase' },
@@ -64,7 +64,7 @@ const menus = [
 	},
 	{
 		name: 'Payment',
-		icons: faMoneyBillWave,
+		icon: faMoneyBillWave,
 		submenus: [
 			{ name: 'Received', route: '/received-payments' },
 			{ name: 'Paid', route: '/paid' },
@@ -73,7 +73,7 @@ const menus = [
 	},
 	{
 		name: 'Expenses',
-		icons: faWallet,
+		icon: faWallet,
 		submenus: [
 			{ name: 'Expense List', route: '/expense-list' },
 			{ name: 'Add Expense', route: '/add-expense' },
@@ -82,7 +82,7 @@ const menus = [
 	},
 	{
 		name: 'Banks',
-		icons: faPiggyBank,
+		icon: faPiggyBank,
 		submenus: [
 			{ name: 'Manage Accounts', route: '/manage-accounts' },
 			{ name: 'Add Accounts', route: '/add-accounts' },
@@ -90,7 +90,7 @@ const menus = [
 	},
 	{
 		name: 'Users',
-		icons: faUser,
+		icon: faUser,
 		submenus: [
 			{ name: 'Users', route: '/users' },
 			{ name: 'Roles', route: '/roles' },
@@ -98,7 +98,7 @@ const menus = [
 	},
 	{
 		name: 'Reports',
-		icons: faFileAlt,
+		icon: faFileAlt,
 		submenus: [
 			{ name: 'Profit / Loss Report', route: '/pl-reports' },
 			{ name: 'Product Sell Report', route: '/sales-report' },
