@@ -12,9 +12,10 @@ import {
 	faWrench,
 } from '@fortawesome/free-solid-svg-icons';
 
-const menus = {
-	home: { name: 'Home', icon: faHome, route: '/' },
-	Contact: {
+const menus = [
+	{ name: 'Home', icon: faHome, route: '/' },
+	{
+		name: 'Contact',
 		icon: faAddressBook,
 		submenus: [
 			{ name: 'Customers', route: '/customers' },
@@ -22,7 +23,8 @@ const menus = {
 			{ name: 'Import contacts', route: '/products-imports' },
 		],
 	},
-	Products: {
+	{
+		name: 'Products',
 		icon: faBoxes,
 		submenus: [
 			{ name: 'Product List', route: '/product-list' },
@@ -33,7 +35,8 @@ const menus = {
 			{ name: 'Warranties', route: '/warranties' },
 		],
 	},
-	Sales: {
+	{
+		name: 'Sales',
 		icon: faShoppingCart,
 		submenus: [
 			{ name: 'Sales List', route: '/sales-list' },
@@ -50,7 +53,8 @@ const menus = {
 			{ name: 'Import Sales', route: '/import-sales' },
 		],
 	},
-	Purchases: {
+	{
+		name: 'Purchases',
 		icons: faMoneyCheck,
 		submenus: [
 			{ name: 'Purchases List', route: '/purchases-list' },
@@ -58,7 +62,8 @@ const menus = {
 			{ name: 'Returned purchases', route: '/returned-purchases' },
 		],
 	},
-	Payment: {
+	{
+		name: 'Payment',
 		icons: faMoneyBillWave,
 		submenus: [
 			{ name: 'Received', route: '/received-payments' },
@@ -66,7 +71,8 @@ const menus = {
 			{ name: 'Add Payment', route: '/add-payment' },
 		],
 	},
-	Expenses: {
+	{
+		name: 'Expenses',
 		icons: faWallet,
 		submenus: [
 			{ name: 'Expense List', route: '/expense-list' },
@@ -74,21 +80,24 @@ const menus = {
 			{ name: 'Expense Categories', route: '/expense-categories' },
 		],
 	},
-	Banks: {
+	{
+		name: 'Banks',
 		icons: faPiggyBank,
 		submenus: [
 			{ name: 'Manage Accounts', route: '/manage-accounts' },
 			{ name: 'Add Accounts', route: '/add-accounts' },
 		],
 	},
-	Users: {
+	{
+		name: 'Users',
 		icons: faUser,
 		submenus: [
 			{ name: 'Users', route: '/users' },
 			{ name: 'Roles', route: '/roles' },
 		],
 	},
-	Reports: {
+	{
+		name: 'Reports',
 		icons: faFileAlt,
 		submenus: [
 			{ name: 'Profit / Loss Report', route: '/pl-reports' },
@@ -111,7 +120,8 @@ const menus = {
 			{ name: 'Activity Log', route: '/activity-log' },
 		],
 	},
-	Settings: {
+	{
+		name: 'Settings',
 		icon: faWrench,
 		submenus: [
 			{ name: 'Business Settings', route: '/business-settings' },
@@ -125,5 +135,6 @@ const menus = {
 			{ name: 'Language', route: '/languages' },
 		],
 	},
-};
+];
+
 export default menus;
