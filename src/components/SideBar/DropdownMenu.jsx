@@ -1,4 +1,6 @@
 import './DropdownMenuStyles.css';
+import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
 
 import NavLink from './NavLink.jsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -18,6 +20,31 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 function DropdownMenu() {
+	const menus = useSelector(({ navigation }) => navigation.menus);
+
+	const menuEls = menus.map((menu) => {
+		const menuName = menu.name;
+		const menuIcon = menu.icon;
+		const menuSubmenus = menu.submenu
+			? menu.submenu.map((submenu) => <li>{submenu.name}</li>)
+			: '';
+
+		const menuElement = (
+			<NavLink
+				icon={<FontAwesomeIcon icon={menuIcon} className="nav-icon" />}
+				navLinkName={menuName}
+			>
+				{menuSubmenus}
+			</NavLink>
+		);
+
+		return menuElement;
+	});
+
+	// useEffect(() => {
+	// 	console.log(menuEls);
+	// }, []);
+
 	return (
 		<ul className="nav-links">
 			<NavLink
