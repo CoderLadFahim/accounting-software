@@ -11,15 +11,15 @@ import './NavLinkStyles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
-function NavLink({ children, icon, navLinkName }) {
+function NavLink({ children, icon, navLinkName, clickHandler }) {
 	const activeMobileDropdown = useSelector(
 		(state) => state.navigation.activeMobileDropdown
 	);
-	const dispatch = useDispatch();
+	const navSliceDispatcher = useDispatch();
 	const currentLinkActive = activeMobileDropdown === navLinkName;
 
 	const handleLinkClick = () => {
-		dispatch(setActiveMobileDropdown(navLinkName));
+		navSliceDispatcher(setActiveMobileDropdown(navLinkName));
 	};
 
 	return (
@@ -27,6 +27,7 @@ function NavLink({ children, icon, navLinkName }) {
 			className={`nav-link bg-gray-800 py-2 text-left text-base relative hover:bg-gray-700 cursor-pointer pl-4 last:border-b last:border-slate-300 ${
 				currentLinkActive ? 'active' : ''
 			}`}
+			onClick={clickHandler}
 		>
 			<div className="nav-link-content space-x-3" onClick={handleLinkClick}>
 				{icon}
