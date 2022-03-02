@@ -1,5 +1,6 @@
 import './DropdownMenuStyles.css';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { setMobileSidebarActive } from '../../features/Navigation/navigationSlice';
 
 import NavLink from './NavLink.jsx';
 import { NavLink as RouterLink, useNavigate } from 'react-router-dom';
@@ -8,6 +9,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 function DropdownMenu() {
 	const menus = useSelector(({ navigation }) => navigation.menus);
 	const navigate = useNavigate();
+	const navSliceDispatcher = useDispatch();
+
+	// this function runs on every link click
+	const hideSidebar = () => {
+		setTimeout(() => {
+			navSliceDispatcher(setMobileSidebarActive());
+		}, 100);
+	};
 
 	// altRoute refers to the menu that have no dropdowns
 	const menuEls = menus.map(
@@ -15,7 +24,7 @@ function DropdownMenu() {
 			const menuSubmenus = submenus && (
 				<ul>
 					{submenus.map(({ route, name }) => (
-						<li key={name}>
+						<li key={name} onClick={hideSidebar}>
 							<RouterLink to={route}>{name}</RouterLink>
 						</li>
 					))}
@@ -23,7 +32,10 @@ function DropdownMenu() {
 			);
 
 			// this function handles clicks on menus that have no submenus
-			const altClickHandler = () => navigate(altRoute);
+			const altClickHandler = () => {
+				navigate(altRoute);
+				hideSidebar();
+			};
 
 			return (
 				<NavLink
