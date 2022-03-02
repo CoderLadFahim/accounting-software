@@ -5,6 +5,7 @@ import { setMobileSidebarActive } from '../../features/Navigation/navigationSlic
 import NavLink from './NavLink.jsx';
 import { NavLink as RouterLink, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 function DropdownMenu() {
 	const menus = useSelector(({ navigation }) => navigation.menus);
@@ -25,6 +26,7 @@ function DropdownMenu() {
 				<ul>
 					{submenus.map(({ route, name }) => (
 						<li key={name} onClick={hideSidebar}>
+							<FontAwesomeIcon icon={faArrowRight} className="mr-2"/>
 							<RouterLink to={route}>{name}</RouterLink>
 						</li>
 					))}
