@@ -1,8 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
+import menus from './menus';
 
 const initialState = {
 	mobileSidebarActive: false,
 	activeMobileDropdown: 'Home',
+	menus,
 };
 
 export const navigationSlice = createSlice({
