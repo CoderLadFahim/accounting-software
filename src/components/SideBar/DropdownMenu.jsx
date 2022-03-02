@@ -2,6 +2,7 @@ import './DropdownMenuStyles.css';
 import { useSelector } from 'react-redux';
 
 import NavLink from './NavLink.jsx';
+import { NavLink as RouterLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function DropdownMenu() {
@@ -10,8 +11,10 @@ function DropdownMenu() {
 	const menuEls = menus.map(({ name: menuName, icon: menuIcon, submenus }) => {
 		const menuSubmenus = submenus && (
 			<ul>
-				{submenus.map((submenu) => (
-					<li>{submenu.name}</li>
+				{submenus.map(({ route, name }) => (
+					<li key={name}>
+						<RouterLink to={route}>{name}</RouterLink>
+					</li>
 				))}
 			</ul>
 		);

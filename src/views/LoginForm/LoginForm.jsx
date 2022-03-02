@@ -44,6 +44,7 @@ function LoginForm() {
 		const { value: userEnteredUsername } = usernameInput;
 		const { value: userEnteredPassword } = passwordInput;
 
+		// temporary
 		const validCredentials = {
 			username: 'admin@gmail.com',
 			password: '123456',
