@@ -5,6 +5,8 @@ const initialState = {
 	mobileSidebarActive: false,
 	activeMobileDropdown: 'Home',
 	menus,
+	//  states after this point are only used in desktop screens
+	activeMainMenu: 'Reports',
 };
 
 export const navigationSlice = createSlice({

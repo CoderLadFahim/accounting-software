@@ -17,7 +17,7 @@ import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons';
 function LoginForm() {
 	const dispatch = useDispatch();
 
-	// AppInput values
+	// AppInput values (added temporary values)
 	const [username, setUsername] = useState('admin@gmail.com');
 	const [password, setPassword] = useState('123456');
 
