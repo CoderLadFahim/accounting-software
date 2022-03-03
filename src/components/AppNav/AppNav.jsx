@@ -11,20 +11,28 @@ import { faCalculator, faBell } from '@fortawesome/free-solid-svg-icons';
 function AppNav() {
 	const [notificationExists, setNotificationExists] = useState(true);
 	const navSliceDispatcher = useDispatch();
+	const activeMenu = useSelector(
+		({ navigation }) => navigation.activeMainMenu
+	);
 	const menus = useSelector(({ navigation }) => navigation.menus).map(
 		({ name, icon }) => ({ name, icon })
 	);
 
 	const menusLis = menus.map((menu) => (
-		<li onClick={() => navSliceDispatcher(setActiveMainMenu(menu.name))}>
+		<li
+			onClick={() => navSliceDispatcher(setActiveMainMenu(menu.name))}
+			className={`p-2 flex flex-col items-center gap-y-1 hover:text-green-400 rounded-md cursor-pointer ${
+				activeMenu === menu.name ? 'active-menu' : ''
+			}`}
+		>
 			<FontAwesomeIcon icon={menu.icon} />
 			{menu.name}
 		</li>
 	));
 
-	// useEffect(() => {
-	// 	console.log(menusLis);
-	// }, []);
+	useEffect(() => {
+		console.log(activeMenu);
+	}, []);
 
 	return (
 		<nav className="fixed w-screen top-0 h-16 shadow bg-white text-gray-700 grid place-items-center">
@@ -44,7 +52,9 @@ function AppNav() {
 					</div>
 				</div>
 
-				<ul className="site-menus flex">{menusLis}</ul>
+				<ul className="site-menus flex justify-between items-center w-9/12">
+					{menusLis}
+				</ul>
 
 				<div className="nav-btns space-x-6 flex">
 					<button className="btn">
