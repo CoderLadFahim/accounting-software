@@ -3,7 +3,11 @@ import { useSelector, useDispatch } from 'react-redux';
 import { setMobileSidebarActive } from '../../features/Navigation/navigationSlice';
 
 import NavLink from './NavLink.jsx';
-import { NavLink as RouterLink, useNavigate } from 'react-router-dom';
+import {
+	NavLink as RouterLink,
+	useNavigate,
+	useLocation,
+} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
@@ -11,6 +15,7 @@ function DropdownMenu() {
 	const menus = useSelector(({ navigation }) => navigation.menus);
 	const navigate = useNavigate();
 	const navSliceDispatcher = useDispatch();
+	const { pathname: currentRoutePath } = useLocation();
 
 	// this function runs on every link click
 	const hideSidebar = () => {
@@ -25,8 +30,14 @@ function DropdownMenu() {
 			const menuSubmenus = submenus && (
 				<ul>
 					{submenus.map(({ route, name }) => (
-						<li key={name} onClick={hideSidebar}>
-							<FontAwesomeIcon icon={faArrowRight} className="mr-2"/>
+						<li
+							key={name}
+							onClick={hideSidebar}
+							className={
+								currentRoutePath === route ? 'active-submenu' : ''
+							}
+						>
+							<FontAwesomeIcon icon={faArrowRight} className="mr-2" />
 							<RouterLink to={route}>{name}</RouterLink>
 						</li>
 					))}

@@ -2,10 +2,7 @@
 
 // redux
 import { useSelector, useDispatch } from 'react-redux';
-import {
-	selectActiveMobileDropdown,
-	setActiveMobileDropdown,
-} from '../../features/Navigation/navigationSlice';
+import { setActiveMobileDropdown } from '../../features/Navigation/navigationSlice';
 
 import './NavLinkStyles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
