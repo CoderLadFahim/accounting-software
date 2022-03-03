@@ -39,7 +39,7 @@ function App() {
 						hideSidebar={setShowSidebar}
 					/>
 					<button
-						className="w-10 h-10 rounded-full shadow-md xl:hidden bg-green-400 absolute bottom-5 right-5"
+						className="w-10 h-10 rounded-full shadow-md xl:hidden bg-green-400 fixed bottom-5 right-5"
 						onClick={() => setShowSidebar((prev) => !prev)}
 					>
 						<FontAwesomeIcon

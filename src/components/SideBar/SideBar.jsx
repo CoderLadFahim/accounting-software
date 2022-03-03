@@ -6,7 +6,7 @@ function SideBar({ showSidebar, hideSidebar }) {
 	return (
 		<>
 			<div
-				className={`disabler absolute top-0 bottom-0 left-0 right-0 bg-gray-300 opacity-50 hiding-transition  ${
+				className={`disabler fixed top-0 bottom-0 left-0 right-0 bg-gray-300 opacity-50 hiding-transition  ${
 					!showSidebar && 'hide'
 				}`}
 				onClick={hideSidebar}
