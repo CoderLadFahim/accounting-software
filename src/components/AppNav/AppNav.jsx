@@ -1,11 +1,14 @@
 import './AppNavStyles.css';
 
 import { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalculator, faBell } from '@fortawesome/free-solid-svg-icons';
 
 function AppNav() {
 	const [notificationExists, setNotificationExists] = useState(true);
+	const menus = useSelector(({ navigation }) => navigation.menus);
+	const navSliceDispatcher = useDispatch();
 
 	return (
 		<nav className="fixed w-screen top-0 h-16 shadow bg-white text-gray-700 grid place-items-center">
@@ -24,6 +27,8 @@ function AppNav() {
 						<span className="user-role text-red-600 text-xs">Admin</span>
 					</div>
 				</div>
+
+				<ul className="site-menus"></ul>
 
 				<div className="nav-btns space-x-6 flex">
 					<button className="btn">

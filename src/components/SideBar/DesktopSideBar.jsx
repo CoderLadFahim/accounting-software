@@ -2,6 +2,9 @@ import { useSelector } from 'react-redux';
 import { NavLink as RouterLink } from 'react-router-dom';
 import { useEffect } from 'react';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
 function DesktopSideBar() {
 	const activeMenu = useSelector(
 		({ navigation }) => navigation.activeMainMenu
@@ -12,11 +15,12 @@ function DesktopSideBar() {
 	).find((menu) => menu.name === activeMenu)['submenus'];
 
 	return (
-		<div>
-			<ul>
+		<div className="float-left text-left bg-white shadow h-screen w-64 hidden xl:block">
+			<ul className="mt-1">
 				{activeMenuSubmenus &&
 					activeMenuSubmenus.map((submenu) => (
-						<li key={submenu.name}>
+						<li key={submenu.name} className="py-2 px-3 text-gray-700 hover:text-blue-700">
+							<FontAwesomeIcon icon={faArrowRight} className="mr-2"/>
 							<RouterLink to={submenu.route}>{submenu.name}</RouterLink>
 						</li>
 					))}
