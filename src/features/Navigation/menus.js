@@ -115,7 +115,7 @@ const menus = [
 			{ name: 'Stock Adjustment Report', route: '/stock-adjustment-report' },
 			{ name: 'Stock Report', route: '/stock-report' },
 			{ name: 'Customer Groups Report', route: '/customer-groups-report' },
-			{ name: 'Supplier &amp; Customer Report', route: 'contacts-report' },
+			{ name: 'Supplier & Customer Report', route: 'contacts-report' },
 			{ name: 'Tax Report', route: '/tax-reports' },
 			{ name: 'Activity Log', route: '/activity-log' },
 		],
