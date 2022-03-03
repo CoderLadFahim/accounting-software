@@ -109,7 +109,7 @@ const menus = [
 			{ name: 'Sell Payment Report', route: '/sell-payment-report' },
 			{ name: 'Purchase Payment Report', route: '/purchase-payment-report' },
 			{ name: 'Product Purchase Report', route: '/purchase-report' },
-			{ name: 'Purchase &amp; Sale', route: '/purchase-sale-report' },
+			{ name: 'Purchase & Sale', route: '/purchase-sale-report' },
 			{ name: 'Items Report', route: '/items-report' },
 			{ name: 'Trending Products', route: '/treding-products' },
 			{ name: 'Stock Adjustment Report', route: '/stock-adjustment-report' },
