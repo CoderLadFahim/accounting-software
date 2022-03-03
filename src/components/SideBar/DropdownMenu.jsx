@@ -1,4 +1,5 @@
 import './DropdownMenuStyles.css';
+import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setMobileSidebarActive } from '../../features/Navigation/navigationSlice';
 
