@@ -9,6 +9,7 @@ import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 import AppNav from './components/AppNav/AppNav.jsx';
 import SideBar from './components/SideBar/SideBar.jsx';
+import DesktopSideBar from './components/SideBar/DesktopSideBar.jsx';
 import LoginForm from './views/LoginForm/LoginForm.jsx';
 import AddCategory from './views/AddCategory/AddCategory.jsx';
 import AddProduct from './views/AddProduct/AddProduct.jsx';
@@ -38,6 +39,7 @@ function App() {
 						showSidebar={showSidebar}
 						hideSidebar={setShowSidebar}
 					/>
+					<DesktopSideBar />
 					<button
 						className="w-10 h-10 rounded-full shadow-md xl:hidden bg-green-400 fixed bottom-5 right-5"
 						onClick={() => setShowSidebar((prev) => !prev)}
