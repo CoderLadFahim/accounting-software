@@ -10,7 +10,7 @@ import {
 	useLocation,
 } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons';
 
 function DropdownMenu() {
 	const menus = useSelector(({ navigation }) => navigation.menus);
@@ -38,7 +38,10 @@ function DropdownMenu() {
 								currentRoutePath === route ? 'active-submenu' : ''
 							}
 						>
-							<FontAwesomeIcon icon={faArrowRight} className="mr-2" />
+							<FontAwesomeIcon
+								icon={faArrowRightLong}
+								className="mr-2"
+							/>
 							<RouterLink to={route}>{name}</RouterLink>
 						</li>
 					))}

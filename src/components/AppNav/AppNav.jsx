@@ -52,7 +52,7 @@ function AppNav() {
 					</div>
 				</div>
 
-				<ul className="site-menus flex justify-between items-center w-9/12">
+				<ul className="site-menus hidden xl:flex justify-between items-center w-9/12">
 					{menusLis}
 				</ul>
 
